@@ -12,4 +12,4 @@ La idea es que a la hora de registrarse llene el siguiente formulario:
 En la misma interfaz para crear tu cuenta esta la opcion de "¿Ya tienes una Cuenta?"
 esto por si el usuario ya se ha registrado anteriormente.
 
-Por ultimo agruege la opcion de que el Usuario se pueda registrar con una cuenta de Google, ya que la mayoria de paginas utilizan este sistema y es mas rapido para el Usuario crearse una Cuenta.
+Por ultimo agregue la opcion de que el Usuario se pueda registrar con una cuenta de Google, ya que la mayoria de paginas utilizan este sistema y es mas rapido para el Usuario crearse una Cuenta.
