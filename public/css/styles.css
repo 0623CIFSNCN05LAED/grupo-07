@@ -1,0 +1,119 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+h1{
+    text-align: center;
+    font-size: 2rem;
+}
+.productContainerFather{
+    background-color: lightgray;
+    width: 90vw;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 2rem;
+}
+.productContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.eraseProduct{
+    border: none;
+    background-color: transparent;
+    margin: 5px;
+}
+.eraseProduct i{
+    font-size: 1.2rem;
+    text-align: left;
+}
+.productContainer img{
+    width: 80px;
+    height: 80px;
+    margin: 5px;
+}
+.productContainerData{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.productContainerData h5{
+    width: 50%;
+    padding: 10px;
+    font-size: 1rem;
+}
+.productContainerData p{
+    width: 50%;
+    padding: 10px;
+    font-size: 1.2rem;
+}
+.productContainerDataNumber{
+    display: flex;
+    width: 50%;
+    padding: 10px;
+    font-size: 1.2rem;
+    justify-content: center;
+}
+.productContainerDataNumber input{
+    width: 50%;
+    text-align: center;
+}
+.productContainerDataNumber button{
+    width: 20px;
+}
+.descuentoContainer{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+}
+.descuentoContainer label{
+    margin-bottom: .5rem;
+}
+.descuentoContainer input{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: .5rem;
+    font-size: 1rem;
+    text-align: center;
+}
+.buttonDiscount{
+    background-color: lightgray;
+    font-size: 1rem;
+}
+.totalCartContainerFather{
+    text-align: center;
+}
+.totalCartContainerFather h3{
+    margin-bottom: 1rem;
+}
+.totalCartContainer{
+    margin-bottom: 1rem;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.totalCartContainer p{
+    width: 50%;
+    padding: 10px;
+}
+.purchaseButton{
+    text-align: center;
+    margin-bottom: 2rem;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.purchaseButton button{
+    background-color: lightgray;
+    font-size: 1rem;
+    width: 80%;
+}

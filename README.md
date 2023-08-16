@@ -42,3 +42,6 @@ Para desarrollarlos, hemos usado Figma como nuestra herramienta principal. El pr
 * Formulario de Registro
 * Formulario de login
 * Colores, logo y tipografía
+
+
+## [Trello](https://trello.com/b/aXoa0MKB/dh-working)
