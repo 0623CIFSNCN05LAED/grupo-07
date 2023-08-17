@@ -13,7 +13,7 @@
 >_Soy un apasionado de 19 años que adora las finanzas y la tecnología. Me encanta aprender cosas nuevas, especialmente en el ámbito tecnológico. Me considero un líder que disfruta ayudar. Siempre busco combinar la tecnología con las finanzas para crear soluciones innovadoras y mejorar el sector financiero._
 >
 **[Elian Jacobsen](https://www.linkedin.com/in/elian-jacobsen-96a74a263/)**
->_Tengo 20 años, fanatico de los autos y la tecnologia, me considero una persona que esta dispuesta a escuchar, aprender y trabajar en equipo. Tengo amplio conocimiento en  software y me gusta nutrirme siempre._
+>_Tengo 20 años, fanatico de los autos y la tecnologia, me considero una pers·ona que esta dispuesta a escuchar, aprender y trabajar en equipo. Tengo amplio conocimiento en  software y me gusta nutrirme siempre._
 >
 **Santiago Soto**
 **Esteban Aguiar**
