@@ -4,8 +4,8 @@
 **[Jonathan Gómez](https://www.linkedin.com/in/gomezjonathanwd/)**
 > _Tengo 29 años y soy de Lanús, Buenos Aires. Habiéndome desarrollado en el área de Recursos Humanos, comencé a sentir interés por el desarrollo web hace apróx. 2 años y decidí comenzar este camino. Mi objetivo es dedicarme al front y especializarme en ese aspecto._
 >
-**Tobías Ramírez**
-Hola a todos! soy tobias ramirez, tengo 20 años. vivo en Argentina,Buenos Aires.En mi tiempo libre me gustar jugar a los videojuegos y soy dj, incursione en el mundo de la programacion por curiosidad. 
+**Tobías Ramírez**(https://www.linkedin.com/in/tobias-ramirez-026863277/)**
+>Hola a todos! soy tobias ramirez, tengo 20 años. vivo en Argentina,Buenos Aires.En mi tiempo libre me gustar jugar a los videojuegos y soy dj, incursione en el mundo de la programacion por curiosidad. 
 
 **[Felipe Bolgar](https://www.linkedin.com/in/felipe-bolgar-b08648285/)**
 >_Tengo 19 años, me gusta la musica y hacer deporte. Soy fanatico de los videojuegos y de la juntadas con amigos, me gusta aprender cosas nuevas y compartir ideas._
