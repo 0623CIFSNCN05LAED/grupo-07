@@ -11,6 +11,10 @@ app.listen(PORT, () => {
     console.log("server andando en puerto " + PORT)
 })
 
-app.get("/login", (req, res) => {
-    res.sendFile(path.join(__dirname, "views/login.html"))
-})
+const loginRouter = require("./routers/loginRouter");
+
+
+app.set('views', __dirname + '/views'); 
+app.set('view engine', 'ejs'); 
+
+app.use(loginRouter)
