@@ -1,0 +1,99 @@
+!DOCTYPE html>
+<html>
+<head>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #D1D1D1;
+            margin: 0;
+            padding: 0;
+        }
+        #header {
+            background-color: #000000;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        #header h1 {
+            margin: 0;
+            font-size: 2em;
+            font-weight: bold;
+        }
+        #content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        form {
+            background-color: white;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 0 10px #ccc;
+        }
+        label {
+            display: block;
+            font-size: 1.2em;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="number"], textarea {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <h1>MercadoArte</h1>
+    </div>
+    <div id="content">
+        <form action="/ruta/de/subida" method="POST" enctype="multipart/form-data">
+            <label for="nombre">Nombre del producto:</label><br>
+            <input type="text" id="nombre" name="nombre" placeholder="Escribe el nombre del producto"><br><br>
+            <label for="descripcion">Descripción del producto:</label><br>
+            <textarea id="descripcion" name="descripcion" placeholder="Escribe una descripción del producto"></textarea><br><br>
+            <label for="precio">Precio del producto:</label><br>
+            <input type="number" id="precio" name="precio" placeholder="Escribe el precio del producto"><br><br>
+            <label for="imagen">Imagen del producto:</label><br>
+            <input type="file" id="imagen" name="imagen"><br><br>
+            <img id="preview" src="" height="200"><br><br>
+            <input type="submit" value="Subir producto">
+         </form>
+
+         <script>
+             document.getElementById('imagen').addEventListener('change', function(event) {
+                 var file = event.target.files[0];
+                 var reader = new FileReader();
+                 reader.onload = function(event) {
+                     document.getElementById('preview').src = event.target.result; 
+                 };
+                 reader.readAsDataURL(file);
+             });
+         </script>
+
+    </div>
+</body>
+</html>
