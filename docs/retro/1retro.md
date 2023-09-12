@@ -1,4 +1,4 @@
-# RETRO (Grupo N° 7)
+# RETRO Sprint 1 (Grupo N° 7)
 ***
 ## Contexto
 El contexto de este archivo retro.md es sobre el sprint del trabajo integrador grupal dictado por la institucion "Digital House". Nuestro grupo es el Grupo N° 7 y sus integrantes son:

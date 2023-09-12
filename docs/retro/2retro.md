@@ -1,4 +1,4 @@
-# RETRO (Grupo N° 7)
+# RETRO sprint 2 (Grupo N° 7)
 ***
 ## Contexto
 El contexto de este archivo retro.md es sobre el sprint del trabajo integrador grupal dictado por la institucion "Digital House". Nuestro grupo es el Grupo N° 7 y sus integrantes son:
@@ -11,37 +11,26 @@ El contexto de este archivo retro.md es sobre el sprint del trabajo integrador g
 - Esteban Aguilar
     ***
 ## Aspectos positivos
-Desde el primer dia podemos descatar varios aspectos positivos, ya que gracias a la seleccion de equipo por parte de los profesores de Digital House nos encontramos con integrantes que cada uno se especializaba en una habilidad diferente, alguno en el liderazgo, otro con experiencia en el coding, etcetera... Algunos de los aspectos positivos a destacar son:
-- Buena division de los trabajos
-- Buena comunicacion
+Existen pocos aspectos positivos que destacar en este sprint. Uno de los aspectos destacables es que al finalizar el sprint, identificamos problemas en la ejecución de nuestro equipo. El único aspecto positivo que podemos resaltar es que continuamos realizando el curso, aunque no lo hacemos con la misma dedicación inicial, hemos mantenido la constancia.
+- Constancia
 - Buen ambiente
     ***
 ## Mejoras realizadas
-Desde el primer sprint como grupo identificamos varios problemas, con estas identificaciones mejoramos de nuestros errores y mejoramos como equipo, como mejoras realizadas podemos destacar:
-- Mejora en trabajo en equipo
-- Mejora en la comunicacion
-- Mejora en la asignacion
-- Mejora en el coding
+En este sprint, no logramos destacar en mejoras, ya que no nos concentramos lo suficiente en nuestros objetivos. Autocríticamente, reconocemos que existen áreas en las que debemos mejorar como equipo. Una de las mejoras que implementamos fue la autocrítica, algo que nos faltaba, ya que no sabíamos cómo responder como equipo ante las dificultades.
+- autocritica
   ***
 ## Obstaculos y desafios
-En nuestro comienzo como equipo nos encontramos varios desafios, ya que para alguno de nosotros era nuevo trabajar como equipo y al ser la primera vez es muy probable que fallemos o se nos dificulte en varias areas. Por esta razon desde nuestro primero trabajo como equipo nos encontramos con varios obstaculos y desafios, entre ellos:
+Enfrentamos obstáculos y desafíos en la ejecución de nuestras tareas asignadas, principalmente debido a la falta de comunicación y organización. Esto tuvo un impacto significativo en nuestro progreso, ya que nos retrasamos en el curso.
 - Nos encontramos dificultades en la comunicacion
 - Nos encontramos dificultades en la organizacion
-- Nos encontramos dificultades en la consola
   ***
 ## Lecciones aprendidas
-En nuestro camino nuestros errores se convirtieron en lecciones, las cuales aprendimos y nos hizo mejorar como equipo y dar un mejor performance. Las lecciones que aprendimos fueron:
-- Aprendimos a trabajar en equipo
-- Aprendimos a dividir tareas
-- Aprendimos a organizar espacios de trabajo (trello)
+Al observar que nos estábamos quedando atrás como equipo y al notar que otros equipos estaban mucho más avanzados que nosotros tanto en términos técnicos como de comunicación, aprendimos la importancia de no retrasarnos más. Dado que estamos llevando a cabo un curso intensivo, es crucial que no nos atrasemos ni con el material de estudio ni con las entregas.
+- Aprendimos a autocriticarnos y mejorar como equipo
+- Acelerar nuestro ritmo de aprendizaje
     ***
-## Acciones de mejorar
-Si bien mejoramos considerablemente como equipo, seguimos con dificultades para trabajar en el apartado del codigo, se nos dificulta lo tecnico, como el pushear nuestros archivos, el manejo de GIT, el apartado de codigo, etcetera... Acciones a mejorar:
-- Necesitamos mejorar en el manejo de GIT | GitHub
-- Necesitamos mejorar en el codigo
-  ***
 ## Apreciaciones y conclusion
-Nos queda mucho por aprender y por trabajar en equipo, pero nos supimos mantener y sostener una mejora ya que realmente queremos entragar un trabajo bien hecho y que sea valioso, ya que mientras mejor trabajemos, mejor va a ser nuestro aprendizaje en esta cursada. Por lo cual como apreciacion principal podemos decir que este grupo tiene futuro ya que sus integrantes realmente quieren aprender y finalizar la cursada con exito.
+"Fue un sprint en el que no nos comprometimos lo suficiente, lo que resultó en retrasos en el contenido y en nuestro ritmo de aprendizaje. Al compararnos con otros equipos, nos dimos cuenta de que nos encontrábamos en desventaja, lo que nos causó vergüenza. Esto nos llevó a hacer una autocrítica y a comprender que debemos mejorar."
 ***
 Archivo retro.md escrito por el grupo 7
 
