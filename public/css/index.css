@@ -1,0 +1,86 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para el header */
+header {
+    background-color: #333; /* Fondo del header en gris oscuro */
+    color: #fff; /* Texto en blanco */
+    padding: 10px 0;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 150px;
+}
+
+.busqueda input[type="text"] {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    width: 250px;
+}
+
+.busqueda button {
+    background-color: #666; /* Botón de búsqueda en gris medio */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.usuario a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+/* Estilos para los productos */
+.productos {
+    max-width: 1200px;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.producto {
+    width: calc(33.33% - 20px); /* 3 columnas en pantalla grande */
+    margin-bottom: 20px;
+    background-color: #f2f2f2; /* Fondo del producto en gris claro */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.producto img {
+    max-width: 100%;
+}
+
+.agregar-carrito {
+    background-color: #333; /* Botón de agregar al carrito en gris oscuro */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* Estilos para el footer */
+footer {
+    background-color: #333; /* Fondo del footer en gris oscuro */
+    color: #fff; /* Texto en blanco */
+    text-align: center;
+    padding: 10px 0;
+}
