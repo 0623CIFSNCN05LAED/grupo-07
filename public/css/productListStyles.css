@@ -4,10 +4,10 @@
     box-sizing: border-box;
     font-family: 'Roboto';
 }
-body{
+/* body{
     width: 90%;
     margin: auto;
-}
+} */
 h1{
     color: #000;
     font-family: 'Lobster', cursive;
