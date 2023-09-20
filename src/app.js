@@ -5,18 +5,12 @@ const app = express();
 
 app.use(express.static(path.join(__dirname, "../public")));
 
-const cartRoutes = require('./routes/cart-routes');
-const listRoutes = require('./routes/list-router');
-const loginRoutes = require('./routes/login-routes');
-const ProductRoutes = require('./routes/Route');
+const mainRouter = require('./routes/main-router')
 
 app.set("view engine", "ejs");
 app.set("views", "./src/views");
 
-app.use("/cart", cartRoutes);
-app.use("/productList", listRoutes);
-app.use(loginRoutes);
-app.use("/createproduct",ProductRoutes);
+app.use("/", mainRouter)
 
 const PORT = 3000
 app.listen(PORT, () => {
