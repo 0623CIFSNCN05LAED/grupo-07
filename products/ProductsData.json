@@ -1,78 +1,73 @@
-
-     [
-      {
-        "id": 1,
-        "name": "¿Qué sabe el alma del pez?",
-        "description": "Esta es una obra de arte de 2019, creada con una técnica mixta sobre papel de 250 gramos. Mide 44x55cm sin marco y 53x63cm con un marco de bisel de madera fino negro, passepartout blanco y vidrio.",
-        "price": 56.000,
-        "author": "Dario Parejas"
-        
-      },
-      {
-        "id": 2,
-        "name": "16 horas",
-        "description": "Esta es una obra de arte vibrante y única de 36x50cm, creada con una mezcla de acrílico, óleo pastel, marcador y lápices sobre paspartú.",
-        "price": 46.828,
-        "author": " Andrea Basmagi"
-
-      },
-      {
-        "id": 3,
-        "name": "Abaut me",
-        "description": "Esta es una obra de collage de 28x35cm, realizada con acrílico, marcador, grafito y cartón sobre paspartú.",
-        "price": 30.780,
-        "author": "Andrea Basmagi"
-      },                                  
-      {
-        "id": 4,
-        "name": "Abstracción Contemple",
-        "descriptioon": "Esta es una obra de arte de 60x50cm, creada con una técnica mixta sobre tela, que promete ser una adición intrigante a cualquier colección.",
-        "price": 70.000,
-        "author": "Daniel Penna"
-      },
-      {
-        "id": 5,
-        "name": "Abstracción Doble",
-        "description": "Esta es una obra de arte díptica de 100x60cm, creada con una técnica mixta sobre tela, que promete ser una adición intrigante a cualquier colección.",
-        
-  "price" :150.000, 
-  "author" :"Daniel Penna" 
-  }, 
-  { 
-  "id" :6, 
-  "name" :"De Nuestras Bocas Solo Sale la Verdad ", 
-  "description" :"esta obra de arte, de 30x40cm, es una exploración íntima del espacio y la forma. Realizada con tinta sobre papel, la pieza juega con la luz y la sombra para crear profundidad y textura. Su tamaño compacto invita al espectador a acercarse y sumergirse en los detalles finos y las sutilezas de la tinta.", 
-  "price" :31.800, 
-  "author" :"Juan Miceli" 
-  }, 
-  { 
-  "id" :7, 
-  "name" :"La gracia de Atenea y Zeus que truena sórdido", 
-  "description" :"Esta obra es un díptico de 160x90cm, donde se explora la interacción de acrílico, collage y tintas sobre tela. La dualidad de las piezas crea una narrativa visual dinámica, mientras que la mezcla de técnicas aporta una rica textura y profundidad a la obra. Cada detalle ha sido cuidadosamente considerado, resultando en una pieza que es tanto intrigante como estéticamente atractiva", 
-  "price" :300.000, 
-  "author" :"Dario Parejas " 
-  }, 
-  { 
-  "id" :8, 
-  "name" :"De Nuestras Bocas Solo Sale la Verdad", 
-  "description" :"Esta obra de arte es una impresionante pieza creada con la técnica de tinta sobre papel. Con un tamaño de 35x50 cm, captura la atención con su delicada y detallada ejecución", 
-  "price" :37.800, 
-  "author" :"Juan Miceli"
+[
+  {
+    "id": 1,
+    "name": "¿Qué sabe el alma del pez?",
+    "description": "Esta es una obra de arte de 2019, creada con una técnica mixta sobre papel de 250 gramos. Mide 44x55cm sin marco y 53x63cm con un marco de bisel de madera fino negro, passepartout blanco y vidrio.",
+    "price": 56,
+    "author": "Dario Parejas"
   },
   {
-  "id":9,
-  "name":"Y el alma huye por los trampolines",
-  "description":"Impresionante tríptico creado con la técnica de acrílico, collage y tintas sobre tela en bastidor. Con un tamaño de 240x90 cm",
-  "price":450.000,
-  "author":"Dario Parejas"
+    "id": 2,
+    "name": "16 horas",
+    "description": "Esta es una obra de arte vibrante y única de 36x50cm, creada con una mezcla de acrílico, óleo pastel, marcador y lápices sobre paspartú.",
+    "price": 46.828,
+    "author": " Andrea Basmagi"
   },
   {
-  "id":10,
-  "name":"El mundo nuevo empieza en cuartos sabios",
-  "description":"Esta obra de arte es un impresionante ejemplo de la combinación de técnicas de acrílico, óleo y carbón sobre tela en bastidor. Con un tamaño de 70x70 cm",
-  "price":150.000,
-  "author":"Dario Parejas"
+    "id": 3,
+    "name": "Abaut me",
+    "description": "Esta es una obra de collage de 28x35cm, realizada con acrílico, marcador, grafito y cartón sobre paspartú.",
+    "price": 30.78,
+    "author": "Andrea Basmagi"
+  },
+  {
+    "id": 4,
+    "name": "Abstracción Contemple",
+    "descriptioon": "Esta es una obra de arte de 60x50cm, creada con una técnica mixta sobre tela, que promete ser una adición intrigante a cualquier colección.",
+    "price": 70,
+    "author": "Daniel Penna"
+  },
+  {
+    "id": 5,
+    "name": "Abstracción Doble",
+    "description": "Esta es una obra de arte díptica de 100x60cm, creada con una técnica mixta sobre tela, que promete ser una adición intrigante a cualquier colección.",
+    "price": 150,
+    "author": "Daniel Penna"
+  },
+  {
+    "id": 6,
+    "name": "De Nuestras Bocas Solo Sale la Verdad ",
+    "description": "esta obra de arte, de 30x40cm, es una exploración íntima del espacio y la forma. Realizada con tinta sobre papel, la pieza juega con la luz y la sombra para crear profundidad y textura. Su tamaño compacto invita al espectador a acercarse y sumergirse en los detalles finos y las sutilezas de la tinta.",
+    "price": 31.8,
+    "author": "Juan Miceli"
+  },
+  {
+    "id": 7,
+    "name": "La gracia de Atenea y Zeus que truena sórdido",
+    "description": "Esta obra es un díptico de 160x90cm, donde se explora la interacción de acrílico, collage y tintas sobre tela. La dualidad de las piezas crea una narrativa visual dinámica, mientras que la mezcla de técnicas aporta una rica textura y profundidad a la obra. Cada detalle ha sido cuidadosamente considerado, resultando en una pieza que es tanto intrigante como estéticamente atractiva",
+    "price": 300,
+    "author": "Dario Parejas "
+  },
+  {
+    "id": 8,
+    "name": "De Nuestras Bocas Solo Sale la Verdad",
+    "description": "Esta obra de arte es una impresionante pieza creada con la técnica de tinta sobre papel. Con un tamaño de 35x50 cm, captura la atención con su delicada y detallada ejecución",
+    "price": 37.8,
+    "author": "Juan Miceli"
+  },
+  {
+    "id": 9,
+    "name": "Y el alma huye por los trampolines",
+    "description": "Impresionante tríptico creado con la técnica de acrílico, collage y tintas sobre tela en bastidor. Con un tamaño de 240x90 cm",
+    "price": 450,
+    "author": "Dario Parejas"
+  },
+  {
+    "id": 10,
+    "name": "El mundo nuevo empieza en cuartos sabios",
+    "description": "Esta obra de arte es un impresionante ejemplo de la combinación de técnicas de acrílico, óleo y carbón sobre tela en bastidor. Con un tamaño de 70x70 cm",
+    "price": 150,
+    "author": "Dario Parejas"
   }
-  ]
-  
-  
+ 
+]

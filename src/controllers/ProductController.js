@@ -8,6 +8,12 @@ const controller = {
         const id = req.params.id;
         products.delete(id);
         res.redirect("/productlist");
+    },
+    create: (req, res) => {
+     const {nombre,descripcion,precio}  = req.body
+     
+console.log (req.body)
+        res.redirect("/formproduct");
     }
 }
 

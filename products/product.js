@@ -20,7 +20,13 @@ module.exports = {
     return product;
   },
   create: function (product) {
-    console.log(`Creating product ${product.name}`);
+    console.log ("hola")
+    const productsFilePath = path.join(__dirname, "./ProductsData.json");
+    const products = this.getProducts()
+    const newid = uuidv4() 
+    const newproduct = {id:newid,...product}
+    products.push  (newproduct)
+    fs.writeFileSync(productsFilePath,JSON.stringify(products,null,2));
   },
   update: function (id, product) {
     console.log(`Updating product ${product.name}`);

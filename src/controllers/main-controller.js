@@ -9,8 +9,11 @@ const controller = {
         res.render("login")
     }),
     create: (req, res) => {
-        res.render('index')
+     res.render("CreateProducts")
     },
+    users: (req, res) => {
+        res.render("usersData")
+       },
 }
 
 module.exports = controller;

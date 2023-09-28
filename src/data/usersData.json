@@ -1,0 +1,72 @@
+[
+    {
+      "id": 1,
+      "firstName": "Tobias",
+      "lastName": "zantos",
+      "email": "zantos1@example.com",
+      "password": "12345"
+    },
+    {
+      "id": 2,
+      "firstName": "Sebastian",
+      "lastName": "Lider",
+      "email": "lider2@example.com",
+      "password": "123456"
+    },
+    {
+      "id": 3,
+      "firstName": "Carlos",
+      "lastName": "Roberto",
+      "email": "robeto3@example.com",
+      "password": "1234567"
+    },
+    {
+      "id": 4,
+      "lastName": "Antonio",
+      "apellido": "Jose",
+      "email": "jose4@example.com",
+      "password": "12345678"
+    },
+    {
+      "id": 5,
+      "lastName": "Maria",
+      "apellido": "Cristaldo",
+      "email": "cris5@example.com",
+      "password": "123456789"
+    },
+    {
+      "id": 6,
+      "firstName": "Manuel",
+      "apellido": "Raul",
+      "email": "raul6@example.com",
+      "password": "1234567890"
+    },
+    {
+      "id": 7,
+      "firstName": "Juan",
+      "apellido": "Sanchez",
+      "email": "manu7@example.com",
+      "password": "123456789010"
+    },
+    {
+      "id": 8,
+      "firstName": "David ",
+      "apellido": "Martinez",
+      "email": "davi8@example.com",
+      "password": "123456789011"
+    },
+    {
+      "id": 9,
+      "firstName": "Jose ",
+      "apellido": "Antonio",
+      "email": "anto9@example.com",
+      "password": "123456789012"
+    },
+    {
+      "id": 10,
+      "firstName": "Javier",
+      "lastName": " Gomez",
+      "email": "gome10@example.com",
+      "password": "123456789013"
+    }
+  ]
