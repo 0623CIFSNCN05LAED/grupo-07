@@ -1,27 +1,21 @@
 {
-  "name": "grupo-07",
+  "name": "detalle-de-producto",
   "version": "1.0.0",
-  "description": "### Integrantes **[Jonathan Gómez](https://www.linkedin.com/in/gomezjonathanwd/)** > _Tengo 29 años y soy de Lanús, Buenos Aires. Habiéndome desarrollado en el área de Recursos Humanos, comencé a sentir interés por el desarrollo web hace apróx. 2 años y decidí comenzar este camino. Mi objetivo es dedicarme al front y especializarme en ese aspecto._ > **Tobías Ramírez**",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/app.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/0623CIFSNCN05LAED/grupo-07.git"
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/0623CIFSNCN05LAED/grupo-07/issues"
-  },
-  "homepage": "https://github.com/0623CIFSNCN05LAED/grupo-07#readme",
   "dependencies": {
-    "body-parser": "^1.20.2",
     "ejs": "^3.1.9",
-    "express": "^4.18.2",
-    "uuid": "^9.0.1"
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
   }
 }

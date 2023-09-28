@@ -1,20 +1,25 @@
-const express = require("express");
+const express= require('express');
 const path = require("path");
-const bodyParser = require('body-parser');
+
+const  mainrouter = require ("./routes/product-router");
 
 const app = express();
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, "../public")));
 
-const mainRouter = require('./routes/main-router')
+const mainCotroller = require("./controllers/product-controller");
+const productCotroller = require('./controllers/product-controller');
 
-app.set("view engine", "ejs");
+app.use(express.static(path.join(__dirname,"../public")));
+
+
+const PORT = 3001;
+app.listen(PORT,() => {
+    console.log("Se"+ PORT)
+});
+
+
+
+app.use(mainrouter);
+
+
 app.set("views", "./src/views");
-
-app.use("/", mainRouter)
-
-const PORT = 3000
-app.listen(PORT, () => {
-    console.log("server andando en puerto " + PORT)
-})
+app.set("view engine", "ejs");  
