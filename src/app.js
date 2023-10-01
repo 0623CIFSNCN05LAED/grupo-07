@@ -1,25 +1,18 @@
-const express= require('express');
+const express = require("express");
 const path = require("path");
-
-const  mainrouter = require ("./routes/product-router");
 
 const app = express();
 
-const mainCotroller = require("./controllers/product-controller");
-const productCotroller = require('./controllers/product-controller');
+app.use(express.static(path.join(__dirname, "../public")));
 
-app.use(express.static(path.join(__dirname,"../public")));
+const mainRouter = require('./routes/main-router')
 
-
-const PORT = 3001;
-app.listen(PORT,() => {
-    console.log("Se"+ PORT)
-});
-
-
-
-app.use(mainrouter);
-
-
+app.set("view engine", "ejs");
 app.set("views", "./src/views");
-app.set("view engine", "ejs");  
+
+app.use("/", mainRouter)
+
+const PORT = 3000
+app.listen(PORT, () => {
+    console.log("server andando en puerto " + PORT)
+})
