@@ -5,9 +5,20 @@ const controller = {
     list: (req, res) => {
         res.render('productList')
     },
-    login: ((req, res) => {
-        res.render("login")
-    }),
+    showLogin: (req, res) => {
+        const errors = req.session.errors
+        const oldData = req.session.oldData
+        req.session.oldData = null
+        req.session.errors = null
+        res.render("login", {errors: errors ? errors : null,oldData,})
+    },
+    login: (req, res) => {
+        const data = req.body
+
+        req.session.userData = data;
+
+        res.redirect("/")
+    },
     create: (req, res) => {
      res.render("CreateProducts")
     },

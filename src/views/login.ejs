@@ -16,15 +16,17 @@
     </header>
     <main>
         <div class="container">
-            <h1>Iniciar secion</h1>
+            <h1>Iniciar sesión</h1>
             <p>Mantenete actualizado en Mercado Arte</p>
-            <form action="#" method="POST">
+            <form action="/login" method="POST">
+                <label for="user-name"></label>
                 <input type="text" name="user-name" id="user-name" placeholder="Nombre">
+                <label for="user-password"></label>
                 <input type="password" name="user-password" id="user-password" placeholder="Contraseña">
-                <a class="password-forgot" href="#">Olvidaste tu contraseña?</a>
-                <button type="submit">Iniciar secion</button>
+                <a class="password-forgot" href="#">¿Olvidaste tu contraseña?</a>
+                <button type="submit">Iniciar sesión</button>
                 <p class="or"><span class="span-or">or</span></p>
-                <p>No tenes una cuenta? <span><a href="/register">Registrate</a></span></p>
+                <p>¿No tenes una cuenta? <span><a href="/register">Registrate</a></span></p>
             </form>
         </div>
     </main>
