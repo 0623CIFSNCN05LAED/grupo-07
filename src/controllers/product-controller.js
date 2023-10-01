@@ -1,9 +1,14 @@
-const path = require("path");
+const products = require('../../products/product');
 
-const productCotroller = {
-    home: (req,res)=> {
-        //res.sendFile(path.join(__dirname,"../src/productDetail.html"));
-        res.render("productDetail");
+const controller = {
+    cart: (req, res) => {
+        res.render('index')
     },
-};
-module.exports = productCotroller;
+    destroy: (req, res) => {
+        const id = req.params.id;
+        products.delete(id);
+        res.redirect("/productlist");
+    }
+}
+
+module.exports = controller;
