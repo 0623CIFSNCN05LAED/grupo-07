@@ -4,25 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mercado Arte | Tienda de Arte</title>
-    <link rel="stylesheet" href="/public/css/index.css">
+    <%- include('partials/head') %>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <a href="index.html"><img src="/public/images/logo1.jpg" alt="Mercado Arte"></a>
-            </div>
-            <div class="busqueda">
-                <input type="text" placeholder="Buscar productos">
-                <button type="submit">Buscar</button>
-            </div>
-            <div class="usuario">
-                <a href="perfil.html">Mi Perfil</a>
-                <a href="carrito.html">Carrito de Compras (0)</a>
-            </div>
-        </nav>
-    </header>
-
+    <%- include('partials/header') %>
     <main>
         <!--Banner-->
         <div>
@@ -31,7 +16,7 @@
         <section class="productos">
             <!-- Producto 1 -->
             <article class="producto">
-                <img src="producto1.jpg" alt="Producto 1">
+                <img src="/images/obraArte2.jpeg" alt="Producto 1">
                 <h2>(Nombre de la obra) </h2>
                 <p>Descripción de la obra de arte.</p>
                 <p>Precio: $XX.XX</p>
@@ -40,7 +25,7 @@
 
             <!-- Producto 2 -->
             <article class="producto">
-                <img src="producto2.jpg" alt="Producto 2">
+                <img src="/images/obraArte2.jpeg" alt="Producto 2">
                 <h2>(Nombre de la obra)</h2>
                 <p>Descripción de la obra de arte.</p>
                 <p>Precio: $XX.XX</p>
@@ -48,7 +33,7 @@
             </article>
             <!-- Producto 3 -->
             <article class="producto">
-                <img src="producto1.jpg" alt="Producto 3">
+                <img src="/images/obraArte2.jpeg" alt="Producto 3">
                 <h2>(Nombre de la obra)</h2>
                 <p>Descripción de la obra de arte.</p>
                 <p>Precio: $XX.XX</p>
@@ -57,7 +42,7 @@
 
             <!-- Producto 4 -->
             <article class="producto">
-                <img src="producto2.jpg" alt="Producto 4">
+                <img src="/images/obraArte2.jpeg" alt="Producto 4">
                 <h2>(Nombre de la obra)</h2>
                 <p>Descripción de la obra de arte.</p>
                 <p>Precio: $XX.XX</p>
@@ -65,7 +50,7 @@
             </article>            
             <!-- Producto 5 -->
             <article class="producto">
-                <img src="producto1.jpg" alt="Producto 5">
+                <img src="/images/obraArte2.jpeg" alt="Producto 5">
                 <h2>(Nombre de la obra)</h2>
                 <p>Descripción de la obra de arte.</p>
                 <p>Precio: $XX.XX</p>
@@ -74,7 +59,7 @@
 
             <!-- Producto 6 -->
             <article class="producto">
-                <img src="producto2.jpg" alt="Producto 6">
+                <img src="/images/obraArte2.jpeg" alt="Producto 6">
                 <h2>(Nombre de la obra)</h2>
                 <p>Descripción de la obra de arte.</p>
                 <p>Precio: $XX.XX</p>
@@ -82,7 +67,7 @@
             </article>
                         <!-- Producto 5 -->
             <article class="producto">
-                <img src="producto1.jpg" alt="Producto 5">
+                <img src="/images/obraArte2.jpeg" alt="Producto 5">
                 <h2>(Nombre de la obra)</h2>
                 <p>Descripción de la obra de arte.</p>
                 <p>Precio: $XX.XX</p>
@@ -91,7 +76,7 @@
 
             <!-- Producto 6 -->
             <article class="producto">
-                <img src="producto2.jpg" alt="Producto 6">
+                <img src="/images/obraArte2.jpeg" alt="Producto 6">
                 <h2>(Nombre de la obra)</h2>
                 <p>Descripción de la obra de arte.</p>
                 <p>Precio: $XX.XX</p>
@@ -99,7 +84,7 @@
             </article>
             <!-- Producto 7 -->
             <article class="producto">
-                <img src="producto1.jpg" alt="Producto 7">
+                <img src="/images/obraArte2.jpeg" alt="Producto 7">
                 <h2>(Nombre de la obra)</h2>
                 <p>Descripción de la obra de arte.</p>
                 <p>Precio: $XX.XX</p>
@@ -108,7 +93,7 @@
 
             <!-- Producto 8 -->
             <article class="producto">
-                <img src="producto2.jpg" alt="Producto 8">
+                <img src="/images/obraArte2.jpeg" alt="Producto 8">
                 <h2>(Nombre de la obra)</h2>
                 <p>Descripción de la obra de arte.</p>
                 <p>Precio: $XX.XX</p>
@@ -116,7 +101,7 @@
             </article>
             <!-- Producto 9 -->
             <article class="producto">
-                <img src="producto1.jpg" alt="Producto 9">
+                <img src="/images/obraArte2.jpeg" alt="Producto 9">
                 <h2>(Nombre de la obra)</h2>
                 <p>Descripción de la obra de arte.</p>
                 <p>Precio: $XX.XX</p>
@@ -125,7 +110,7 @@
 
             <!-- Producto 10 -->
             <article class="producto">
-                <img src="producto2.jpg" alt="Producto 10">
+                <img src="/images/obraArte2.jpeg" alt="Producto 10">
                 <h2>(Nombre de la obra)</h2>
                 <p>Descripción de la obra de arte.</p>
                 <p>Precio: $XX.XX</p>
@@ -133,19 +118,5 @@
             </article>
         </section>
     </main>
-
-    <footer>
-        <section>
-        <p>&copy; 2023 Mercado Arte - Todos los derechos reservados</p>
-        </section>
-        <!-- Perfiles linkedin de los integrantes-->
-        <section>
-        <h3>Perfiles de linkedin del grupo 7:</h3>
-            <a href="">Agustín Arias</a>
-            <a href="">Elian Jacobsen</a>
-            <a href="">Jonathan Ramirez</a>
-            <a href="">Santiago Soto</a>
-            <a href="">Felipe Bolgar</a>
-        </section>
-    </footer>
+    <%- include('partials/footer') %>
 </html>

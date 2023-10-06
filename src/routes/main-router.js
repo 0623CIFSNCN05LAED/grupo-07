@@ -7,6 +7,7 @@ const validations = require("../validations/login-validations")
 const validateForm = require("../middlewares/validate-form")
 const userGuard = require('../middlewares/user-guard')
 
+router.get("/", mainController.home)
 router.get("/cart", userGuard ,mainController.cart);
 router.get("/productlist",mainController.list);
 router.get("/login", mainController.showLogin)
