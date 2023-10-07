@@ -70,43 +70,73 @@ nav img{
     text-decoration: none;
     color: #fff;
 }
-/* Estilos para los productos */
-.productos {
-    max-width: 1200px;
-    margin: 20px auto;
+/* estilos slider */
+.slider{
+    width: 95%;
+    margin: auto;
+}
+.sliderMargin{
+    margin-top: 1rem;
+}
+/* Productos y Secciones */
+.indexMain{
+    width: 90%;
     display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+.category{
+    display: flex;
+    justify-content: space-evenly;
     flex-wrap: wrap;
-    justify-content: space-between;
+    width: 100%;
 }
-.producto {
-    width: calc(33.33% - 20px);
-    margin-bottom: 20px;
-    background-color: #f2f2f2;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.categoryTitle{
+    font-family: 'Lobster', cursive;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 1rem;
 }
-.producto img {
-    max-width: 100%;
+.categoryCard{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin-bottom: 1rem;
 }
-.agregar-carrito {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 5px 10px;
-    cursor: pointer;
+.categoryCard p{
+    color: #000;
+}
+.categoryCard button{
+    border: 1px solid #d1d1d1;
+    background-color: transparent;
+    font-family: 'Lobster', cursive;
+}
+.paymentMethod{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.method{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.method i{
+    font-size: 2rem;
+}
+.method p{
+    color: #000;
 }
 /* Estilos para el footer */
 footer{
     background-color: #333;
-    color: #fff;
     text-align: center;
 }
 .footerTitle{
     font-family: 'Playfair Display', serif;
     font-size: 1.2rem;
     padding-top: 1rem;
+    color: #fff;
 }
 .socialsIcons{
     display: flex;
@@ -177,6 +207,9 @@ footer{
     .linkedinMembers{
         font-size: 0.8rem;
     }
+    .method i{
+        font-size: 2.5rem;
+    }
 }
 /*desktop*/
 @media (min-width: 1280px){
@@ -197,5 +230,20 @@ footer{
     }
     .slider{
         width: 70%;
+    }
+    .navigation a{
+        font-size: 1.2rem;
+    }
+    .categoryTitle{
+        font-size: 2.5rem;
+    }
+    .categoryCard{
+        width: 25%;
+    }
+    .method i{
+        font-size: 4rem;
+    }
+    .method p{
+        font-size: 1.2rem;
     }
 }
