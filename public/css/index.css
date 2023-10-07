@@ -1,86 +1,249 @@
-/* Estilos generales */
-body {
-    font-family: Arial, sans-serif;
+/* TITULOS */
+/* font-family: 'Lobster', cursive; */
+*{
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Roboto';
 }
-
 /* Estilos para el header */
-header {
-    background-color: #333; /* Fondo del header en gris oscuro */
-    color: #fff; /* Texto en blanco */
-    padding: 10px 0;
-}
-
-nav {
-    max-width: 1200px;
-    margin: 0 auto;
+nav{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    background-color: #333;
+    padding:  10px;
 }
-
-.logo img {
-    max-width: 150px;
+nav img{
+    width: 100px;
+    height: 100px;
 }
-
-.busqueda input[type="text"] {
-    padding: 5px;
-    border: none;
+.searchBar{
+    position: relative;
+}
+.searchBar input{
+    max-width: 350px;
+    padding: 10px;
+    padding-right: 35px;
     border-radius: 5px;
-    width: 250px;
+    border: 0;
+    outline: none;
+    font-size: 1rem;
 }
-
-.busqueda button {
-    background-color: #666; /* Botón de búsqueda en gris medio */
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 5px 10px;
+.searchBar button{
+    background-color: white;
+    padding: 10px 15px;
+    position: absolute;
+    border: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 0 5px 5px 0;
+    color: #333;
     cursor: pointer;
 }
-
-.usuario a {
-    color: #fff;
+.accountMenu i{
+    color: white;
+    font-size: 1.5rem;
+}
+.accountMenu a{
+    color: white;
+    display: none;
     text-decoration: none;
-    margin-left: 20px;
 }
-
-/* Estilos para los productos */
-.productos {
-    max-width: 1200px;
-    margin: 20px auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.producto {
-    width: calc(33.33% - 20px); /* 3 columnas en pantalla grande */
-    margin-bottom: 20px;
-    background-color: #f2f2f2; /* Fondo del producto en gris claro */
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.producto img {
-    max-width: 100%;
-}
-
-.agregar-carrito {
-    background-color: #333; /* Botón de agregar al carrito en gris oscuro */
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 5px 10px;
+.productCart a{
+    color: white;
+    font-size: 1.5rem;
     cursor: pointer;
 }
-
-/* Estilos para el footer */
-footer {
-    background-color: #333; /* Fondo del footer en gris oscuro */
-    color: #fff; /* Texto en blanco */
+.navigation{
+    display: flex;
+    background-color: #333;
+    justify-content: space-between;
+    padding: 0.5rem;
+    box-shadow: 1px 5px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 1px 5px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 5px 5px 0px rgba(0,0,0,0.75);
+}
+.navigation a{
+    text-decoration: none;
+    color: #fff;
+}
+/* estilos slider */
+.slider{
+    width: 95%;
+    margin: auto;
+}
+.sliderMargin{
+    margin-top: 1rem;
+}
+/* Productos y Secciones */
+.indexMain{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+.category{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.categoryTitle{
+    font-family: 'Lobster', cursive;
+    font-size: 2rem;
     text-align: center;
-    padding: 10px 0;
+    margin-top: 1rem;
+}
+.categoryCard{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin-bottom: 1rem;
+}
+.categoryCard p{
+    color: #000;
+}
+.categoryCard button{
+    border: 1px solid #d1d1d1;
+    background-color: transparent;
+    font-family: 'Lobster', cursive;
+}
+.paymentMethod{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.method{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.method i{
+    font-size: 2rem;
+}
+.method p{
+    color: #000;
+}
+/* Estilos para el footer */
+footer{
+    background-color: #333;
+    text-align: center;
+}
+.footerTitle{
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    padding-top: 1rem;
+    color: #fff;
+}
+.socialsIcons{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    justify-content: center;
+}
+.socialsIcons i{
+    color: #fff;
+    margin: 0.5rem;
+    font-size: 1.5rem;
+}
+.categories{
+    width: 90%;
+    margin: auto;
+}
+.categoriesList{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+.categoriesList a{
+    text-decoration: none;
+    color: #fff;
+}
+.access{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+.access a, p{
+    text-decoration: none;
+    margin: 0.5rem;
+    color: #fff;
+}
+.linkedin{
+    margin-top: 1rem;
+    font-size: 0.5rem;
+}
+.linkedin a{
+    text-decoration: none;
+    color: #fff;
+}
+.linkedinMembers{
+    display: flex;
+    justify-content: space-evenly;
+}
+/*media querys*/
+/*tablet*/
+@media (min-width: 520px){
+    .searchBar input{
+        max-width: 350px;
+    }
+    .accountMenu{
+        display: flex;
+    }
+    .accountMenu i{
+        display: none;
+    }
+    .accountMenu a{
+        display: block;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .navigation{
+        justify-content: space-evenly;
+    }
+    .linkedinMembers{
+        font-size: 0.8rem;
+    }
+    .method i{
+        font-size: 2.5rem;
+    }
+}
+/*desktop*/
+@media (min-width: 1280px){
+    .searchBar input{
+        width: 350px;
+    }
+    .accountMenu{
+        display: flex;
+    }
+    .accountMenu i{
+        display: none;
+    }
+    .accountMenu a{
+        display: block;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-weight: bold;
+    }
+    .slider{
+        width: 70%;
+    }
+    .navigation a{
+        font-size: 1.2rem;
+    }
+    .categoryTitle{
+        font-size: 2.5rem;
+    }
+    .categoryCard{
+        width: 25%;
+    }
+    .method i{
+        font-size: 4rem;
+    }
+    .method p{
+        font-size: 1.2rem;
+    }
 }

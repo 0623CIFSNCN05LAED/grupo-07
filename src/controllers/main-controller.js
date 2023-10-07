@@ -24,7 +24,10 @@ const controller = {
     },
     users: (req, res) => {
         res.render("usersData")
-       },
+    },
+    home: (req, res) => {
+        res.render("index")
+    }
 }
 
 module.exports = controller;
