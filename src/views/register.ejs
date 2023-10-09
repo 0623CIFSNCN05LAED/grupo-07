@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/register.css">
+</head>
+<body>
+    <header>
+        <a href="/"><img class="logo-page" src="/images/logo1.jpg" alt="Mercado-Arte-Logo"></a>
+    </header>
+    <main>
+        <div class="container">
+            <h1>Registrate</h1>
+            <p>Crea tu cuenta para recivir las ultimas noticias en Mercado Arte</p>
+            <form action="/register" method="POST">
+                <label for="userName"></label>
+                <input type="text" name="userName" id="userName" placeholder="Nombre" value="<%= locals.old && old.userName ? old.userName : '' %>">
+                <% if (locals.errors && errors.userName) { %>
+                    <p class="error-msg"><%= errors.userName.msg %></p>
+                <% } %>
+                <label for="userPassword"></label>
+                <input type="password" name="userPassword" id="userPassword" placeholder="Contraseña">
+                <% if (locals.errors && errors.userPassword) { %>
+                    <p class="error-msg"><%= errors.userPassword.msg %></p>
+                <% } %>
+                <label for="checkPassword"></label>
+                <input type="password" name="checkPassword" id="checkPassword" placeholder="Confirmar contraseña">
+                <% if (locals.errors && errors.checkPassword) { %>
+                    <p class="error-msg"><%= errors.checkPassword.msg %></p>
+                <% } %>
+                <button type="submit">Crear cuenta</button>
+                <p class="or"><span class="span-or">or</span></p>
+                <p>¿Ya tenes una cuenta? <span><a href="/login">Logueate</a></span></p>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

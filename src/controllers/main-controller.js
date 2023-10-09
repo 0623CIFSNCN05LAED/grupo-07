@@ -1,3 +1,5 @@
+const { validationResult } = require('express-validator');
+
 const controller = {
     cart: (req, res) => {
         res.render('productCart')
@@ -27,6 +29,21 @@ const controller = {
     },
     home: (req, res) => {
         res.render("index")
+    },
+    showRegister: (req, res) => {
+        res.render("register")
+    },
+    processRegister: (req, res) => {
+        let errors = validationResult(req);
+
+        if(!errors.isEmpty()) {
+            res.render("register", {
+                errors: errors.mapped(),
+                old: req.body
+            });
+        } else {
+            res.redirect("/")
+        }
     }
 }
 
