@@ -11,7 +11,8 @@ header {
   padding-left: 20px;
   padding-right: 20px;
   width: 100%;
-  margin-bottom: 20px;  
+  margin-bottom: 20px;
+  margin-left: 10px;
 }
 
 .logo-page {
@@ -135,5 +136,26 @@ header {
     }
     .container button {
         margin-bottom: 0px;
+    }
+}
+
+@media (max-width: 660px) {
+    .container {
+        width: 50%;
+    }
+}
+@media (max-width: 600px) {
+    .container {
+        width: 70%;
+    }
+}
+@media (max-width: 460px) {
+    .container {
+        width: 85%;
+    }
+}
+@media (max-width: 378px) {
+    .container {
+        width: 100%;
     }
 }
