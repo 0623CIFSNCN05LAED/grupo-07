@@ -1,25 +1,34 @@
 <header>
-    <nav>
-        <div>
-            <a href="/"><img src="/images/logo1.jpg" alt="logo"></a>
-        </div>
+        <a href="/"><img class="logo" src="/images/logo1.jpg" alt="Logo"></a>
         <div class="searchBar">
             <input type="text" placeholder="Busca por título o autor...">
             <button><i class="fa-solid fa-magnifying-glass"></i></button>
         </div>
-        <div class="productCart">
-            <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
-        </div>
-        <div class="accountMenu">
-            <i class="fa-solid fa-user"></i>
-            <a href="/login">Logueate</a>
-            <a href="/register">Regístrate</a>
-        </div>
-    </nav>
-    <div class="navigation">
-        <a href="">Novedades</a>
-        <a href="">Destacados</a>
-        <a href="">Ofertas</a>
-        <a href="/productList">Todos los productos</a>
-    </div>
+        <button class="abrir-menu boton" id="abrir"><i class="fa-solid fa-bars"></i></button>
+        <nav class="nav" id="nav">
+            <button class="cerrar-menu boton" id="cerrar"><i class="fa-solid fa-xmark"></i></button>
+            <ul class="nav-list">
+                <i class="fa-solid fa-user userDropdown"></i>
+                <a href="/login" class="userOption">Logueate</a>
+                <a href="/register" class="userOption">Regístrate</a>
+                <li><a href="#">Novedades</a></li>
+                <li><a href="#">Destacados</a></li>
+                <li><a href="#">Ofertas</a></li>
+                <li><a href="/productList">Productos</a></li>
+                <a href="/productCart" class="cartOption">Mi Carrito</a>
+                <a href="/productCart" class="cartIcon"><i class="fa-solid fa-cart-shopping"></i></a>
+            </ul>
+        </nav>
 </header>
+<script>
+    const nav = document.querySelector("#nav");
+    const abrir = document.querySelector("#abrir");
+    const cerrar = document.querySelector("#cerrar");
+
+    abrir.addEventListener("click", () => {
+        nav.classList.add("visible");
+    })
+    cerrar.addEventListener("click", () => {
+        nav.classList.remove("visible");
+    })
+</script>
