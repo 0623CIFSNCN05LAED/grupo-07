@@ -1,99 +1,109 @@
-!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-    
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #D1D1D1;
-            margin: 0;
-            padding: 0;
-        }
-        #header {
-            background-color: #000000;
-            color: white;
-            padding: 10px;
-            text-align: center;
-        }
-        #header h1 {
-            margin: 0;
-            font-size: 2em;
-            font-weight: bold;
-        }
-        #content {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        form {
-            background-color: white;
-            border-radius: 5px;
-            padding: 20px;
-            box-shadow: 0 0 10px #ccc;
-        }
-        label {
-            display: block;
-            font-size: 1.2em;
-            margin-top: 20px;
-            font-weight: bold;
-        }
-        input[type="text"], input[type="number"], textarea {
-            width: 100%;
-            padding: 12px 20px;
-            margin: 8px 0;
-            box-sizing: border-box;
-            border: 2px solid #ccc;
-            border-radius: 4px;
-        }
-        input[type="submit"] {
-            width: 100%;
-            background-color: #4CAF50;
-            color: white;
-            padding: 14px 20px;
-            margin-top: 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        input[type="submit"]:hover {
-            background-color: #45a049;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/CreateProduct.css"
 </head>
-
 <body>
-    <div id="header">
-        <h1>MercadoArte</h1>
-    </div>
-    <div id="content">
-        <form action="http://localhost:3000/createproduct" method="POST" enctype="multipart/form-data">
-            <label for="nombre">Nombre del producto:</label><br>
-            <input type="text" id="nombre" name="nombre" placeholder="Escribe el nombre del producto"/><br><br>
-            <label for="descripcion">Descripción del producto:</label><br>
-            <textarea id="descripcion" name="descripcion" placeholder="Escribe una descripción del producto"></textarea><br><br>
-            <label for="precio">Precio del producto:</label><br>
-            <input type="number" id="precio" name="precio" placeholder="Escribe el precio del producto"/><br><br>
-            <label for="imagen">Imagen del producto:</label><br>
-            <input type="file" id="imagen" name="imagen"/><br><br>
-            <img id="preview" src="" height="200"><br><br>
-            <input type="submit" value="Subir producto"/>
-         </form>
-
-         <script>
-             document.getElementById('imagen').addEventListener('change', function(event) {
-                 var file = event.target.files[0];
-                 var reader = new FileReader();
-                 reader.onload = function(event) {
-                     document.getElementById('preview').src = event.target.result; 
-                 };
-                 reader.readAsDataURL(file);
-             });
-         </script>
-
-    </div>
+    <header class="header">
+        <header class="header">
+            <h1>MercadoArte</h1>
+            
+        </header>
+        
+    </header>
+    <form action="/products/edit" method="POST" enctype="multipart/form-data" class="formulario">
+        <h1 class="titulo-formulario">Crea tu producto</h1>
+        <div class="control-formulario">
+            <label for="title">Título de la Obra:</label>
+            <input type="text" id="title" name="title" placeholder="Ejemplo: Noche Estrellada" class="control" required>
+        </div>
+        <div class="control-formulario">
+            <label for="artist">Artista:</label>
+            <input type="text" id="artist" name "artist" placeholder="Ejemplo: Vincent van Gogh" class="control" required>
+        </div>
+        <div class="control-formulario">
+            <label for="description">Descripción:</label>
+            <textarea id="description" name="description" placeholder="Ejemplo: Una pintura icónica que representa una noche estrellada..." class="control" required></textarea>
+        </div>
+        <div class="control-formulario">
+            <label for="year">Año de Creación:</label>
+            <input type="text" id="year" name="year" placeholder="Ejemplo: 1889" class="control" required>
+        </div>
+        <div class "control-formulario">
+            <label for="price">Precio:</label>
+            <input type="text" id="price" name="price" placeholder="Ejemplo: 10000" class="control" required>
+        </div>
+        <div class="control-formulario">
+            <label for="discount">Descuento:</label>
+            <input type="text" id="discount" name="discount" placeholder="Ejemplo: 10%" class="control" required>
+        </div>
+        <div class="control-formulario">
+            <label for="image">Imagen de la Obra:</label>
+            <input type="file" id="image" name="image" accept="image/*" class="control" required>
+        </div>
+        <div class="control-formulario">
+            <label for="category">Categoría:</label>
+            <input type="text" id="category" name="category" placeholder="Ejemplo: Pintura" class="control" required>
+        </div>
+        <div class="control-formulario">
+            <label for="colors">Colores:</label>
+            <input type="text" id="colors" name="colors" placeholder="Ejemplo: Azul, Amarillo" class="control" required>
+        </div>
+        <div class="control-formulario">
+            <label for="dimensions">Dimensiones:</label>
+            <input type="text" id="dimensions" name="dimensions" placeholder="Ejemplo: 73.7 cm × 92.1 cm" class="control" required>
+        </div>
+        <div class="control-formulario">
+            <label for="material">Material:</label>
+            <input type="text" id="material" name="material" placeholder="Ejemplo: Óleo sobre lienzo" class="control" required>
+        </div>
+        <div class="control-formulario">
+            <label for="technique">Técnica:</label>
+            <input type="text" id="technique" name="technique" placeholder="Ejemplo: Pintura al óleo" class="control" required>
+        </div>
+        <div class="control-formulario">
+            <label for="frame">Marco:</label>
+            <input type="text" id="frame" name="frame" placeholder="Ejemplo: Enmarcado dorado" class="control" required>
+        </div>
+        <div class="control-formulario">
+            <label for="edition">Edición:</label>
+            <input type="text" id="edition" name="edition" placeholder="Ejemplo: Edición limitada de 50 copias" class="control" required>
+        </div>
+        <button type="submit" class="boton-formulario">Guardar Cambios</button>
+        <button type="reset" class="boton-formulario">Restablecer</button>
+    </form>
+    <footer class="footer">
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="contact-info">
+                    <h3>Contacto</h3>
+                    <p>Correo Electrónico: info@MercadoArte.com</p>
+                    <p>Teléfono: +123 456 789</p>
+                </div>
+                <div class="social-media">
+                    <h3>Redes Sociales</h3>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Instagram</a></li>
+                    </ul>
+                </div>
+                <div class="quick-links">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="#">Términos y Condiciones</a></li>
+                        <li><a href="#">Política de Privacidad</a></li>
+                        <li><a href="#">Preguntas Frecuentes</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 MercadoArte - Todos los derechos reservados</p>
+            </div>
+        </footer>
+        
+    </footer>
 </body>
 </html>
