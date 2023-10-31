@@ -1,6 +1,9 @@
 const { validationResult } = require('express-validator');
 
 const controller = {
+    detail: (req, res) => {
+        res.render('productDetail')
+    },
     cart: (req, res) => {
         res.render('productCart')
     },

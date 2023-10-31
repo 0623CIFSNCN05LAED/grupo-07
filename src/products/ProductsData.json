@@ -37,7 +37,7 @@
   {
     "id": 6,
     "name": "De Nuestras Bocas Solo Sale la Verdad ",
-    "description": "esta obra de arte, de 30x40cm, es una exploración íntima del espacio y la forma. Realizada con tinta sobre papel, la pieza juega con la luz y la sombra para crear profundidad y textura. Su tamaño compacto invita al espectador a acercarse y sumergirse en los detalles finos y las sutilezas de la tinta.",
+    "description": "Esta obra de arte, de 30x40cm, es una exploración íntima del espacio y la forma. Realizada con tinta sobre papel, la pieza juega con la luz y la sombra para crear profundidad y textura. Su tamaño compacto invita al espectador a acercarse y sumergirse en los detalles finos y las sutilezas de la tinta.",
     "price": 31.8,
     "author": "Juan Miceli"
   },
@@ -69,5 +69,4 @@
     "price": 150,
     "author": "Dario Parejas"
   }
- 
 ]
