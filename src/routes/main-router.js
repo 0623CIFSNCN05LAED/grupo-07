@@ -24,13 +24,14 @@ const validateForm = require("../middlewares/validate-form")
 const userGuard = require('../middlewares/user-guard')
 
 router.get("/", mainController.home)
-router.get("/cart", userGuard ,mainController.cart);
+router.get("/productcart", userGuard ,mainController.cart);
 router.get("/productlist",mainController.list);
 router.get("/login", mainController.showLogin)
 router.post("/login", urlencoded({ extended: false }), validations,validateForm, mainController.login)
 router.get("/register", mainController.showRegister);
 router.post("/register", upload.single('imgProfile'), registerValidator, mainController.processRegister);
 router.get("/createproduct", userGuard, mainController.create);
+router.get("/productdetail", mainController.detail)
 //createProduct al ser un formulario va a necesitar una ruta get y la ruta post, también configurando su urlencoded
 
 module.exports = router;    

@@ -8,12 +8,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <%- include('partials/head') %>
     <link rel="stylesheet" href="/css/register.css">
 </head>
 <body>
-    <header>
-        <a href="/"><img class="logo-page" src="/images/logo1.jpg" alt="Mercado-Arte-Logo"></a>
-    </header>
+    <%- include('partials/header') %>
     <main>
         <div class="container">
             <h1>Registrate</h1>
@@ -47,5 +46,6 @@
             </form>
         </div>
     </main>
+    <%- include('partials/footer') %>
 </body>
 </html>
