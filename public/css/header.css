@@ -1,0 +1,216 @@
+/* Estilos para el header */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto';
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: #341b1b;
+    box-shadow: 1px 5px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 1px 5px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 5px 5px 0px rgba(0,0,0,0.75);
+}
+.logo{
+    width: 100px;
+    height: 100px;
+}
+.nav-list{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: end;
+}
+.nav-list li a{
+    text-decoration: none;
+    color: #d1d1d1;
+}
+.nav{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 1rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #333;
+    padding: 2rem;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+    opacity: 0;
+    visibility: hidden;
+}
+.nav.visible {
+    opacity: 1;
+    visibility: visible;
+    z-index: 2;
+}
+.searchBar{
+    position: relative;
+}
+.searchBar input{
+    max-width: 350px;
+    padding: 10px;
+    padding-right: 35px;
+    border-radius: 5px;
+    border: 0;
+    outline: none;
+    font-size: 1rem;
+}
+.searchBar button{
+    background-color: white;
+    padding: 10px 15px;
+    position: absolute;
+    border: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 0 5px 5px 0;
+    color: #333;
+    cursor: pointer;
+}
+.boton{
+    border: none;
+    background: none;
+    color: inherit;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    cursor: pointer;
+    color: #fff;
+    font-size: 2rem;
+}
+.userDropdown{
+    display: none;
+}
+.productCart a{
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.userOption{
+    color: #d1d1d1;
+    text-decoration: none;
+}
+.cartIcon{
+    display: none;
+}
+.cartOption{
+    color: #d1d1d1;
+    text-decoration: none;
+}
+@media (min-width: 520px){
+    .searchBar input{
+        max-width: 350px;
+    }
+    .accountMenu{
+        display: flex;
+    }
+    .accountMenu i{
+        display: none;
+    }
+    .accountMenu a{
+        display: block;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .navigation{
+        justify-content: space-evenly;
+    }
+    .abrir-menu{
+        display: none;
+    }
+    .nav{
+        flex-direction: row;
+        display: block;
+        position: relative;
+        background-color: transparent;
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+        padding: 0;
+    }
+    .nav-list{
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .nav-list li a{
+        color: #fff;
+    }
+    .cerrar-menu{
+        display: none;
+    }
+    header{
+        padding: 1rem;
+    }
+    .cartOption{
+        display: none;
+    }
+    .cartIcon{
+        display: block;
+        color: #fff;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+    .userDropdown{
+        display: block;
+        color: #fff;
+        font-size: 2rem;
+        padding-right: 2rem;
+        cursor: pointer;
+    }
+    .userOption{
+        display: none;
+    }
+}
+/*desktop*/
+@media (min-width: 1280px){
+    .searchBar input{
+        width: 400px;
+    }
+    .accountMenu{
+        display: flex;
+    }
+    .accountMenu i{
+        display: none;
+    }
+    .accountMenu a{
+        display: block;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 1.2rem;
+    }
+    .abrir-menu{
+        display: none;
+    }
+    .cerrar-menu{
+        display: none;
+    }
+    .nav{
+        flex-direction: row;
+        display: block;
+        position: relative;
+        background-color: transparent;
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+    }
+    .nav-list{
+        flex-direction: row;
+        align-items: center;
+    }
+    .nav-list li a{
+        color: #fff;
+        font-size: 1.2rem;
+    }
+    header{
+        padding: 2rem;
+    }
+}
