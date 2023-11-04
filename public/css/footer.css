@@ -1,0 +1,72 @@
+/* Estilos para el footer */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto';
+}
+footer{
+    background-color: #341b1b;
+    text-align: center;
+}
+.footerTitle{
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    padding-top: 1rem;
+    color: #fff;
+}
+.socialsIcons{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    justify-content: center;
+}
+.socialsIcons i{
+    color: #fff;
+    margin: 0.5rem;
+    font-size: 1.5rem;
+}
+.categories{
+    width: 90%;
+    margin: auto;
+}
+.categoriesList{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+.categoriesList a{
+    text-decoration: none;
+    color: #fff;
+}
+.access{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+.access a, p{
+    text-decoration: none;
+    margin: 0.5rem;
+    color: #fff;
+}
+.linkedin{
+    margin-top: 1rem;
+    font-size: 0.5rem;
+}
+.linkedin a{
+    text-decoration: none;
+    color: #fff;
+}
+.linkedinMembers{
+    display: flex;
+    justify-content: space-evenly;
+}
+@media (min-width: 520px){
+    .linkedinMembers{
+        font-size: 0.8rem;
+    }
+}
+/*desktop*/
+@media (min-width: 1280px){
+
+}
