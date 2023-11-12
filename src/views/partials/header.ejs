@@ -11,24 +11,21 @@
                 <i class="fa-solid fa-user userDropdown"></i>
                 <a href="/login" class="userOption">Logueate</a>
                 <a href="/register" class="userOption">Regístrate</a>
-                <li><a href="#">Novedades</a></li>
+                <!-- <li><a href="#">Novedades</a></li>
                 <li><a href="#">Destacados</a></li>
                 <li><a href="#">Ofertas</a></li>
-                <li><a href="/productList">Productos</a></li>
+                <li><a href="/productList">Productos</a></li> -->
+                <div class="dropdown">
+                    <span class="dropdownSpan">Todo</span>
+                    <div class="dropdown-content">
+                        <li><a class="dropdownOption" href="#">Novedades</a></li>
+                        <li><a class="dropdownOption" href="#">Destacados</a></li>
+                        <li><a class="dropdownOption" href="#">Ofertas</a></li>
+                        <li><a class="dropdownOption" href="/productList">Productos</a></li>
+                    </div>
+                </div>
                 <a href="/productcart" class="cartOption">Mi Carrito</a>
                 <a href="/productcart" class="cartIcon"><i class="fa-solid fa-cart-shopping"></i></a>
             </ul>
         </nav>
 </header>
-<script>
-    const nav = document.querySelector("#nav");
-    const abrir = document.querySelector("#abrir");
-    const cerrar = document.querySelector("#cerrar");
-
-    abrir.addEventListener("click", () => {
-        nav.classList.add("visible");
-    })
-    cerrar.addEventListener("click", () => {
-        nav.classList.remove("visible");
-    })
-</script>
