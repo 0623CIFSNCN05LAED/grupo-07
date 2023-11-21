@@ -4,7 +4,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f7e9e9;
+    background-color: #ffffff;
 }
 
 /* header {
@@ -16,6 +16,10 @@ body {
   margin-left: 10px;
 } */
 
+
+main {
+    margin-top: 120px;
+}
 .logo-page {
     width: 85px;
     height: 85px;
@@ -62,6 +66,7 @@ body {
 
 .container form input {
     all: unset;
+    text-align: start;
     border: solid 1px rgb(136, 131, 131);
     border-radius: 8px;
     padding: 10px 20px;
