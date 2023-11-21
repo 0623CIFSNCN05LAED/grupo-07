@@ -16,15 +16,12 @@ CREATE TABLE artists (
     nacionality VARCHAR(255) NOT NULL
 );
 
-
 CREATE TABLE clients (
 id VARCHAR(255) PRIMARY key ,
 name VARCHAR(255),
 email VARCHAR(255),
 address VARCHAR(255)
 );
-
-
 
 CREATE TABLE products  (
     id VARCHAR(255) PRIMARY KEY,
