@@ -47,9 +47,10 @@ body {
     font-weight: 500;
     margin-top: 0;
     margin-bottom: 34px;
+    color: black;
 }
 
-.error-msg {
+.error-msg p{
     color: red;
 }
 

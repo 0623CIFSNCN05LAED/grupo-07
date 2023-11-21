@@ -23,6 +23,11 @@
     margin: auto;
     color: #000;
 }
+.img-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 .container{
     width: 90%;
     height: auto;
