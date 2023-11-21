@@ -16,7 +16,6 @@ CREATE TABLE artists (
     nacionality VARCHAR(255) NOT NULL
 );
 
-
 CREATE TABLE clients (
 id VARCHAR(255) PRIMARY key ,
 name VARCHAR(255),
@@ -24,16 +23,14 @@ email VARCHAR(255),
 address VARCHAR(255)
 );
 
-
-
 CREATE TABLE products  (
     id VARCHAR(255) PRIMARY KEY,
     title VARCHAR(255) NOT NULL,
-    creation_date DATE NOT NULL,
+    creation_date VARCHAR(255) NOT NULL,
     description TEXT,
     price DECIMAL(10, 2) NOT NULL,
-    on_sale BOOLEAN,
-    new BOOLEAN,
+    on_sale TINYINT(1),
+    new TINYINT(1),
     img VARCHAR(255),
     technique_id VARCHAR(255),
     artist_id VARCHAR(255),
@@ -43,7 +40,7 @@ CREATE TABLE products  (
 
 CREATE TABLE sales (
     id VARCHAR(255) PRIMARY KEY,
-    sales_date DATE NOT NULL,
+    sales_date VARCHAR(255) NOT NULL,
     product_id VARCHAR(255),
     client_id VARCHAR(255),
     FOREIGN KEY (product_id) REFERENCES products (id),
