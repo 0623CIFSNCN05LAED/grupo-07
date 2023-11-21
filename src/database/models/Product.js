@@ -11,7 +11,7 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
         creation_date: {
-            type: dataTypes.DATEONLY,
+            type: dataTypes.STRING(255),
             allowNull: false
         },
         description: {
@@ -42,12 +42,12 @@ module.exports = (sequelize, dataTypes) => {
     const Product = sequelize.define(alias,cols,config);
 
     Product.associate = function (models) {
-        Product.belongsTo(models.Technique, { // models.Genre -> Genres es el valor de alias en genres.js
+        Product.belongsTo(models.Technique, {
             as: "technique",
             foreignKey: "id"
         })
 
-        Product.belongsTo(models.Artist, { // models.Actor -> Actors es el valor de alias en actor.js
+        Product.belongsTo(models.Artist, {
             as: "artist",
             foreignKey: 'id',
         })
