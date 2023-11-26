@@ -19,6 +19,13 @@ app.use(session({
 }))
 app.use("/", mainRouter)
 
+//llamo a la ruta de las api
+// const apiProductsRouter = require('./routes/api/products')
+
+
+//creo la colección de mis recursos de products
+// app.use('/api/products',apiProductsRouter);
+
 const PORT = 3000
 app.listen(PORT, () => {
     console.log("server andando en puerto " + PORT)

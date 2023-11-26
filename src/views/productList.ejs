@@ -25,70 +25,16 @@
         </div>
     </div>
     <main class="caja">
-        <div class="cardProducto">
-            <img src="/images/obraArte1.jpeg" alt="">
-            <div class="cardProductoText">
-                <p>Abstracción Contemple</p>
-                <p class="cardProductoPrice">$10000</p>
-                <button>Ver más</button>
+        <% for( let i = 0; i < products.length; i++ ) { %>
+            <div class="cardProducto">
+                <img src="<%= products[i].img %>" alt="">
+                <div class="cardProductoText">
+                    <p><%= products[i].title %></p>
+                    <p class="cardProductoPrice">$ <%= products[i].price %></p>
+                    <a class="button"  href="/products/productdetail/<%= products[i].id %>">Ver Detalle</a>
+                </div>
             </div>
-        </div>
-        <div class="cardProducto">
-            <img src="/images/obraArte1.jpeg" alt="">
-            <div class="cardProductoText">
-                <p>Abstracción Contemple</p>
-                <p class="cardProductoPrice">$10000</p>
-                <button>Ver más</button>
-            </div>
-        </div>
-        <div class="cardProducto">
-            <img src="/images/obraArte1.jpeg" alt="">
-            <div class="cardProductoText">
-                <p>Abstracción Contemple</p>
-                <p class="cardProductoPrice">$10000</p>
-                <button>Ver más</button>
-            </div>
-        </div>
-        <div class="cardProducto">
-            <img src="/images/obraArte1.jpeg" alt="">
-            <div class="cardProductoText">
-                <p>Abstracción Contemple</p>
-                <p class="cardProductoPrice">$10000</p>
-                <button>Ver más</button>
-            </div>
-        </div>
-        <div class="cardProducto">
-            <img src="/images/obraArte1.jpeg" alt="">
-            <div class="cardProductoText">
-                <p>Abstracción Contemple</p>
-                <p class="cardProductoPrice">$10000</p>
-                <button>Ver más</button>
-            </div>
-        </div>
-        <div class="cardProducto">
-            <img src="/images/obraArte1.jpeg" alt="">
-            <div class="cardProductoText">
-                <p>Abstracción Contemple</p>
-                <p class="cardProductoPrice">$10000</p>
-                <button>Ver más</button>
-            </div>
-        </div>
-        <div class="cardProducto">
-            <img src="/images/obraArte1.jpeg" alt="">
-            <div class="cardProductoText">
-                <p>Abstracción Contemple</p>
-                <p class="cardProductoPrice">$10000</p>
-                <button>Ver más</button>
-            </div>
-        </div>
-        <div class="cardProducto">
-            <img src="/images/obraArte1.jpeg" alt="">
-            <div class="cardProductoText">
-                <p>Abstracción Contemple</p>
-                <p class="cardProductoPrice">$10000</p>
-                <button>Ver más</button>
-            </div>
-        </div>
+        <% } %>
     </main>
     </div>
     
