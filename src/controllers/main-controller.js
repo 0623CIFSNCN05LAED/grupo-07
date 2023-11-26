@@ -1,4 +1,5 @@
 const { validationResult } = require('express-validator');
+const db = require('../database/models/index');
 
 const controller = {
     detail: (req, res) => {
@@ -7,8 +8,9 @@ const controller = {
     cart: (req, res) => {
         res.render('productCart')
     },
-    list: (req, res) => {
-        res.render('productList')
+    list: async (req, res) => {
+        let products = await db.Product.findAll()
+        res.render('productList', {products: products})
     },
     showLogin: (req, res) => {
         const errors = req.session.errors
@@ -30,8 +32,10 @@ const controller = {
     users: (req, res) => {
         res.render("usersData")
     },
-    home: (req, res) => {
-        res.render("index")
+    home: async (req, res) => {
+        let products = await db.Product.findAll()
+        // console.log(products)
+        res.render("index", {products: products})
     },
     showRegister: (req, res) => {
         res.render("register")
@@ -47,6 +51,18 @@ const controller = {
         } else {
             res.redirect("/")
         }
+    },
+    featured: async (req, res) => {
+        let products = await db.Product.findAll()
+        res.render('productsFeatured', {products: products})
+    },
+    onSale: async (req, res) => {
+        let products = await db.Product.findAll()
+        res.render('productsOnSale', {products: products})
+    },
+    newProducts: async (req, res) => {
+        let products = await db.Product.findAll()
+        res.render('productsNew', {products: products})
     }
 }
 

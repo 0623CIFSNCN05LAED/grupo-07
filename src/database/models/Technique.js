@@ -18,7 +18,7 @@ module.exports = (sequelize, dataTypes) => {
     const Technique = sequelize.define(alias,cols,config);
 
     Technique.associate = function (models) {
-        Technique.belongsToMany(models.Product, {
+        Technique.hasMany(models.Product, {
             as: "products",
             foreignKey: "id"
         })

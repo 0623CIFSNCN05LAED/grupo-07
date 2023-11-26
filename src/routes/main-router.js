@@ -32,6 +32,9 @@ router.get("/register", mainController.showRegister);
 router.post("/register", upload.single('imgProfile'), registerValidator, mainController.processRegister);
 router.get("/createproduct", userGuard, mainController.create);
 router.get("/productdetail", mainController.detail)
+router.get("/productsonsale", mainController.onSale)
+router.get("/productsfeatured", mainController.featured)
+router.get("/productsnew", mainController.newProducts)
 //createProduct al ser un formulario va a necesitar una ruta get y la ruta post, también configurando su urlencoded
 
 module.exports = router;    

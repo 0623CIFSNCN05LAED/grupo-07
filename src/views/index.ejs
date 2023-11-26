@@ -32,12 +32,21 @@
         <p class="indexParrafo">Adéntrate en el mundo de la vanguardia artística con las nuevas producciones que nuestros artistas asociados tienen para ti.</p>
         <div class= "container">
             <div class="img-container">
-                <img class= "img1" src="/images/obraArte1.jpeg"/>
-                <img class= "img2" src="/images/obraArte1.jpeg"/>
-                <img class= "img3" src="/images/obraArte1.jpeg"/>
+                <%
+                let newCount = 0;
+                
+                for (let i = 0; i < products.length && newCount < 3; i++) {
+                    if (products[i].new === true) {
+                        newCount++;
+                %>
+                        <img class="img1" src="<%= products[i].img %>"/>
+                <%
+                    }
+                }
+                %>
             </div>
             <div>
-                <button class="previewButton">Ver más</button>
+                <a href="/productsNew"><button class="previewButton">Ver más</button></a>
             </div>
         </div>
     </main>
@@ -46,12 +55,21 @@
         <p class="indexParrafo">¡Conoce las obras del momento! Vas a encontrar los cuadros más visitados y los más consultados y requeridos por los coleccionistas y conocedores de arte.</p>
         <div class= "container">
             <div class="img-container">
-                <img class= "img1" src="/images/obraArte1.jpeg"/>
-                <img class= "img2" src="/images/obraArte1.jpeg"/>
-                <img class= "img3" src="/images/obraArte1.jpeg"/>
+                <%
+                let featured = 0;
+                
+                for (let i = 0; i < products.length && featured < 3; i++) {
+                    if (products[i]) {
+                        featured++;
+                %>
+                        <img class="img1" src="<%= products[i].img %>"/>
+                <%
+                    }
+                }
+                %>
             </div>
             <div>
-                <button class="previewButton">Ver más</button>
+                <a href="/productsFeatured"><button class="previewButton">Ver más</button></a>
             </div>
         </div>
     </section>
@@ -60,12 +78,21 @@
         <p class="indexParrafo">Las mejores oportunidades las vas a encontrar en Mercado Arte, donde te daremos facilidades para que puedas encontrar esa obra que tanto buscas.</p>
         <div class= "container">
             <div class="img-container">
-                <img class= "img1" src="/images/obraArte1.jpeg"/>
-                <img class= "img2" src="/images/obraArte1.jpeg"/>
-                <img class= "img3" src="/images/obraArte1.jpeg"/>
+                <%
+                let offer = 0;
+                
+                for (let i = 0; i < products.length && offer < 3; i++) {
+                    if (products[i].on_sale === true) {
+                        offer++;
+                %>
+                        <img class="img1" src="<%= products[i].img %>"/>
+                <%
+                    }
+                }
+                %>
             </div>
             <div>
-                <button class="previewButton">Ver más</button>
+                <a href="/productsonsale"><button class="previewButton">Ver más</button></a>
             </div>
         </div>
     </section>
@@ -87,4 +114,5 @@
     </section>
     <%- include('partials/footer') %>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
 </html>
