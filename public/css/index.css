@@ -132,7 +132,6 @@
     .slider{
         width: 70%;
     }
-    
     .method i{
         font-size: 4rem;
     }
@@ -144,9 +143,6 @@
         height: auto;
         text-align: center;
         margin: auto;
-        /* background-image: url('/images/fondotest3.png');
-        background-color: rgba(0, 0, 0, 0.1);
-        background-size: cover; */
     }
     .container img{
         margin-top: 2rem;

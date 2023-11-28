@@ -4,14 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%- include('partials/head') %>
+    <link rel="stylesheet" href="/css/productListStyles.css">
     <title>Destacados</title>
 </head>
 <body>
     <%- include('partials/header') %>
-    <h1>Nuestros Productos Destacados</h1>
-    <div>
-        <!-- armar partial para todas las secciones y ya -->
-    </div>
+    <h1 class="tituloSection">Destacados</h1>
+    <main class="caja cajaSections">
+        <% for( let i = 0; i < products.length; i++ ) { %>
+            <div class="cardProducto">
+                <img src="<%= products[i].img %>" alt="">
+                <div class="cardProductoText">
+                    <p><%= products[i].title %></p>
+                    <p class="cardProductoPrice">$ <%= products[i].price %></p>
+                    <a class="button" href="/products/productdetail/<%= products[i].id %>">Ver Detalle</a>
+                </div>
+            </div>
+        <% } %>
+    </main>
     <%- include('partials/footer') %>
 </body>
 </html>
