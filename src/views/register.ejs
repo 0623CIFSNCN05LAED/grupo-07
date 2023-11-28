@@ -16,19 +16,27 @@
     <main>
         <div class="container">
             <h1>Registrate</h1>
-            <p>Crea tu cuenta para recivir las ultimas noticias en Mercado Arte</p>
+            <p>Crea tu cuenta para recibir las últimas noticias en Mercado Arte</p>
             <form action="/register" method="POST" enctype="multipart/form-data">
-                <label for="userName"></label>
-                <input type="text" name="userName" id="userName" placeholder="Nombre" value="<%= locals.old && old.userName ? old.userName : "" %>">
+                <label for="userName">Nombre</label>
+                <input type="text" name="userName" id="userName" placeholder="Nombre" value="<%= locals.oldData && oldData.userName ? oldData.userName : "" %>">
                 <% if (locals.errors && errors.userName) { %>
                     <p class="error-msg"><%= errors.userName.msg %></p>
                 <% } %>
-                <label for="userPassword"></label>
+
+                <label for="userEmail">Correo Electrónico</label>
+                <input type="email" name="userEmail" id="userEmail" placeholder="Correo Electrónico" value="<%= locals.oldData && oldData.userEmail ? oldData.userEmail : "" %>">
+                <% if (locals.errors && errors.userEmail) { %>
+                    <p class="error-msg"><%= errors.userEmail.msg %></p>
+                <% } %>
+
+                <label for="userPassword">Contraseña</label>
                 <input type="password" name="userPassword" id="userPassword" placeholder="Contraseña">
                 <% if (locals.errors && errors.userPassword) { %>
                     <p class="error-msg"><%= errors.userPassword.msg %></p>
                 <% } %>
-                <label for="checkPassword"></label>
+
+                <label for="checkPassword">Confirmar Contraseña</label>
                 <input type="password" name="checkPassword" id="checkPassword" placeholder="Confirmar contraseña">
                 <% if (locals.errors && errors.checkPassword) { %>
                     <p class="error-msg"><%= errors.checkPassword.msg %></p>
@@ -42,7 +50,7 @@
 
                 <button type="submit">Crear cuenta</button>
                 <p class="or"><span class="span-or">or</span></p>
-                <p>¿Ya tenes una cuenta? <span><a href="/login">Logueate</a></span></p>
+                <p>¿Ya tienes una cuenta? <span><a href="/login">Inicia sesión</a></span></p>
             </form>
         </div>
     </main>
