@@ -45,6 +45,9 @@ h2{
     flex-wrap: wrap;
     padding: 5px;
 }
+.tituloSection{
+    margin-top: 6rem;
+}
 .cardProducto{
     width: 70%;
     margin: auto;

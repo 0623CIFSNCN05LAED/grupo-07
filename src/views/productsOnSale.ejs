@@ -4,11 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%- include('partials/head') %>
+    <link rel="stylesheet" href="/css/productListStyles.css">
     <title>Ofertas</title>
 </head>
 <body>
     <%- include('partials/header') %>
-    <h1>hola</h1>
+    <h1 class="tituloSection">Ofertas</h1>
+    <main class="caja cajaSections">
+        <% for (let i = 0; i < products.length; i++) { %>
+            <% if (products[i].on_sale === true) { %>
+                <div class="cardProducto">
+                    <img src="<%= products[i].img %>" alt="">
+                    <div class="cardProductoText">
+                        <p><%= products[i].title %></p>
+                        <p class="cardProductoPrice">$ <%= products[i].price %></p>
+                        <a class="button" href="/products/productdetail/<%= products[i].id %>">Ver Detalle</a>
+                    </div>
+                </div>
+            <% } %>
+        <% } %>  
+    </main>
     <%- include('partials/footer') %>
 </body>
 </html>
