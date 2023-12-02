@@ -49,7 +49,7 @@ module.exports = (sequelize, dataTypes) => {
 
         Product.belongsTo(models.Artist, {
             as: "artist",
-            foreignKey: 'id',
+            foreignKey: 'artist_id',
         })
     }
     return Product

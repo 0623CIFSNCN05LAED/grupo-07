@@ -5,19 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <%- include('partials/head') %>
 <link rel="stylesheet" href="/css/style.css">
-<title>Detalle de Obra de Arte</title>
+<title><%= products.title %></title>
 </head>
 <body>  
   <%- include('partials/header') %>
   <div class="container">
     <div class="artwork">
-      <img src="/images/Gritona.jpg" alt="Obra de Arte" class="artwork-image"/>
+      <img src="<%= products.img %>" alt="Obra de Arte" class="artwork-image"/>
       <div class="container-right"> 
         <div class="artwork-details"> 
-          <h2 class="artwork-title">Título de la Obra de Arte</h2>
-          <p class="artwork-artist">Artista: Nombre del Artista</p>
-          <p class="artwork-price">$250</p>
-          <p class="artwork-description">Esta es una descripción detallada de la obra de arte. Incluye información sobre el estilo, la técnica utilizada y cualquier otra característica importante que los interesados puedan querer saber.</p>
+          <h2 class="artwork-title"><%= products.title %></h2>
+          <p class="artwork-artist">Artista: <%= products.artist.first_name %> <%= products.artist.last_name %></p>
+          <p class="artwork-price">$<%= products.price %></p>
+          <p class="artwork-description"><%= products.description %></p>
         </div>
         <div class="container-button"> 
          <button class="buttons">+</button> 
