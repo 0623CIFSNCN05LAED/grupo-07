@@ -31,7 +31,7 @@ router.post("/login", urlencoded({ extended: false }), validations,validateForm,
 router.get("/register", mainController.showRegister);
 router.post("/register", upload.single('imgProfile'), registerValidator, mainController.processRegister);
 router.get("/createproduct", userGuard, mainController.create);
-router.get("/productdetail", mainController.detail)
+router.get("/productdetail/:id", mainController.detail)
 router.get("/productsonsale", mainController.onSale)
 router.get("/productsfeatured", mainController.featured)
 router.get("/productsnew", mainController.newProducts)

@@ -2,8 +2,18 @@ const { validationResult } = require('express-validator');
 const db = require('../database/models/index');
 
 const controller = {
-    detail: (req, res) => {
-        res.render('productDetail');
+    detail: async (req, res) => {
+        try {
+            let products = await db.Product.findByPk(req.params.id,
+                {
+                include : ['artist']
+                })
+                console.log(products)
+            res.render('productDetail', { products: products });
+        } catch (error) {
+            console.error(error);
+            res.status(500).send('Error interno del servidor.');
+        }
     },
     cart: (req, res) => {
         res.render('productCart');
