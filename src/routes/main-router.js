@@ -22,6 +22,7 @@ const validations = require("../validations/login-validations")
 const registerValidator = require('../validations/registerValidation');
 const validateForm = require("../middlewares/validate-form")
 const userGuard = require('../middlewares/user-guard')
+const results = require('../controllers/results')
 
 router.get("/", mainController.home)
 router.get("/productcart", userGuard ,mainController.cart);
@@ -35,6 +36,8 @@ router.get("/productdetail/:id", mainController.detail)
 router.get("/productsonsale", mainController.onSale)
 router.get("/productsfeatured", mainController.featured)
 router.get("/productsnew", mainController.newProducts)
+router.get("/results", results.results)
+router.post("/results", results.postResults)
 //createProduct al ser un formulario va a necesitar una ruta get y la ruta post, también configurando su urlencoded
 
 module.exports = router;    

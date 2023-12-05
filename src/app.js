@@ -12,6 +12,10 @@ const mainRouter = require('./routes/main-router')
 app.set("view engine", "ejs");
 app.set("views", "./src/views");
 
+app.use(express.urlencoded({
+    extended: false
+}))
+
 app.use(session({
     secret: "secreto",
     resave: false,

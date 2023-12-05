@@ -48,7 +48,7 @@ const controller = {
     home: async (req, res) => {
         try {
             let products = await db.Product.findAll();
-            res.render("index", { products: products });
+            res.render("index", { products: products,});
         } catch (error) {
             console.error(error);
             res.status(500).send('Error interno del servidor.');
