@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mercado Arte | Tienda de Arte</title>
     <%- include('partials/head') %>
+    <link rel="stylesheet" href="/css/results.css">
 </head>
 <body>
     <%- include('partials/header') %>
@@ -15,6 +16,7 @@
                     <% data.forEach(product => { %>
                         <li>
                             <h2><%= product.title %></h2>
+                            <img src=<%= product.img %> alt="">
                             <p><%= product.description %></p>
                         </li>
                     <% }); %>
