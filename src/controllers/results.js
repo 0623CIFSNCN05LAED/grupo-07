@@ -3,21 +3,18 @@ const db = require('../database/models/index');
 
 module.exports = {
     results: async (req, res) => {
-        let data = await db.Product.findAll()
-        console.log(data);
-        res.render('results', {data});
+        res.render('results');
     },
 
     postResults: async (req, res) => {
-        let inputValue = req.body
+        let inputValue = req.body.autoComplete
         let data = await db.Product.findAll({
             where: {
                 title: {
-                    [Op.like]: '%'+req.body.autoComplete+'%'
+                    [Op.like]: `%${inputValue}%`
                 }
             }
         })
-        console.log(data);
-        res.render('results', {data});
+        res.render('results', {data, inputValue});
     }
 };

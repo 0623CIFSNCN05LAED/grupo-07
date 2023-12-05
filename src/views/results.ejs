@@ -4,25 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mercado Arte | Tienda de Arte</title>
-    <%- include('partials/head') %>
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/results.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+    <script src="/js/burger-menu.js" defer></script>
 </head>
 <body>
     <%- include('partials/header') %>
         <main>
             <% if (data && data.length > 0) { %>
-                <h1>Resultados:</h1>
+                <div class="center">
                 <ul>
                     <% data.forEach(product => { %>
                         <li>
-                            <h2><%= product.title %></h2>
-                            <img src=<%= product.img %> alt="">
-                            <p><%= product.description %></p>
+                            <div class="flex">
+                                <div class="pr-main">
+                                    <h2 class="pr-title"><%= product.title %></h2>
+                                    <p class="price">ARS$ <%= product.price %></p>
+                                    <p class="pr-description"><%= product.description %></p>
+                                    <a class="button" href="/productCart">Agregar al carrito</a>
+                                </div>
+                                <div>
+                                    <img class="pr-img" src=<%= product.img %> alt=<%= product.title %>>
+                                </div>
+                            </div>    
                         </li>
                     <% }); %>
                 </ul>
+                </div>
             <% } else { %>
-                <p>No results found</p>
+                <p class="p-error">No se encontraron resultados de <strong>"<%= inputValue %>"</strong> </p>
             <% } %>
         </main>
     <%- include('partials/footer') %>
