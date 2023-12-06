@@ -26,9 +26,8 @@ p {
     font-weight: 600;
 }
 .pr-description {
-    margin-top: 25px;
-    margin-bottom: 55px;
-    font-size: 20px;
+    font-size: 18px;
+    max-width: 500px;
 }
 .results {
     font-weight: bold;
@@ -40,8 +39,9 @@ ul{
 
 .pr-img{
     width: 400px;
-    height: auto;
-    border: solid 1px black;
+    height: 400px;
+    border: outset 10px rgb(177, 95, 56);
+    object-fit: fill;
 }
 
 .center {
@@ -54,23 +54,39 @@ ul{
     text-align: center;
 }
 
-.price {
-    font-size: 22px;
-}
 
 .button {
     padding: 10px;
     border-radius: 6px;
     text-decoration: none;
     margin-left: 10px;
-    background: rgb(241, 240, 240);
+    background: rgb(255, 255, 255);
     backdrop-filter: blur(10px);
     color: black;
-    border: solid 1px rgb(43, 41, 41);
+    border: solid 1px rgb(68, 68, 68);
     transition: all .4s;
 }
 
 .button:hover {
     background: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
+}
+
+.pr-footer {
+    margin-top: 40px;
+    max-width: 500px;
+}
+.fl-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.bt-10 {
+    margin-top: 40px;
+}
+.strong {
+    font-weight: 500;
+}
+.pr-main {
+    max-width: 500px;
 }

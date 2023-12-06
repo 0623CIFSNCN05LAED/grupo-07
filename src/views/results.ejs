@@ -21,10 +21,24 @@
                         <li>
                             <div class="flex">
                                 <div class="pr-main">
-                                    <h2 class="pr-title"><%= product.title %></h2>
-                                    <p class="price">ARS$ <%= product.price %></p>
+                                    <div class="main-info">
+                                        <h2 class="pr-title">"<%= product.title %>"</h2>
+                                    </div>
+                                    
                                     <p class="pr-description"><%= product.description %></p>
-                                    <a class="button" href="/productCart">Agregar al carrito</a>
+                                    <div class="pr-footer">
+                                        <div class="fl-info">
+                                            <p class="strong">Precio:</p>
+                                            <p class="price">ARS$ <%= product.price %></p>
+                                        </div>
+                                        <div class="fl-info">
+                                            <p class="strong">Creado el:</p>
+                                            <p><%= product.creation_date %></p>
+                                        </div>
+                                        <div class="bt-10">
+                                            <a class="button" href="/productCart">Agregar al carrito</a>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div>
                                     <img class="pr-img" src=<%= product.img %> alt=<%= product.title %>>

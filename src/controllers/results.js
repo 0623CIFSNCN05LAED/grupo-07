@@ -7,14 +7,18 @@ module.exports = {
     },
 
     postResults: async (req, res) => {
-        let inputValue = req.body.autoComplete
-        let data = await db.Product.findAll({
-            where: {
-                title: {
-                    [Op.like]: `%${inputValue}%`
+        try {
+            let inputValue = req.body.autoComplete;
+            let data = await db.Product.findAll({
+                where: {
+                    title: {
+                        [Op.like]: `%${inputValue}%`
+                    }
                 }
-            }
-        })
-        res.render('results', {data, inputValue});
+            })
+            res.render('results', {data, inputValue});
+        } catch(error) {
+            console.log(error);
+        }
     }
 };
