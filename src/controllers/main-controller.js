@@ -8,7 +8,7 @@ const controller = {
                 {
                 include : ['artist']
                 })
-                console.log(products)
+                // console.log(products)
             res.render('productDetail', { products: products });
         } catch (error) {
             console.error(error);
