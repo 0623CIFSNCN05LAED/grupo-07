@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <%- include('partials/head') %>
 <link rel="stylesheet" href="/css/style.css">
-<title><%= products.title %></title>
+<script src="/js/cart.js" defer></script>
+<title>Detalle de Producto</title>
 </head>
 <body>  
   <%- include('partials/header') %>
@@ -20,11 +21,11 @@
           <p class="artwork-description"><%= products.description %></p>
         </div>
         <div class="container-button"> 
-         <button class="buttons">+</button> 
-         <p class="number"> 0 </p>
-         <button class="buttons">-</button> 
+         <button class="buttons" id="add">+</button> 
+         <p class="number" style="color: black;"> 0 </p>
+         <button class="buttons" id="subtract">-</button> 
       </div>
-      <button class="carrito">Agregar al carrito </button>
+      <button class="carrito addToCart">Agregar al carrito </button>
       </div>
     </div>
   </div>

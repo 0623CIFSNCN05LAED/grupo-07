@@ -1,5 +1,5 @@
 const path = require('path')
-const db = require('../database/models')
+const db = require('../../database/models')
 const sequelize = db.sequelize;
 const { Op } = require('sequelize')
 // const moment = require('moment')
@@ -13,8 +13,13 @@ const Technique = db.Technique;
 const productsAPIController = {
     list: async (req, res) => {
         try {
-            let products = await Products.findAll();
-            res.render('productList', { products: products });
+            let products = await Products.findAll(
+                {
+                    include : ['artist']
+                }
+            );
+            // res.render('productList', { products: products });
+            res.send(products)
         } catch (error) {
             console.error(error);
             res.status(500).send('Error interno del servidor.');

@@ -12,11 +12,12 @@
     <!-- css mio -->
     <link rel="stylesheet" href="/css/cartStyles.css">
     <%- include('partials/head') %>
+    <script src="/js/cart.js" defer></script>
     <title>Carrito de Compras</title>
 </head>
 <body>
     <%- include('partials/header') %>
-    <h1>Tu carrito de compras</h1>
+    <h1 style="margin-top: 10rem;">Tu carrito de compras</h1>
     <div class="productContainerFather">
         <button class="eraseProduct"><i class="fa-solid fa-circle-xmark"></i></button>
         <div class="productContainer">
@@ -63,11 +64,11 @@
             </div>
         </div>
     </div>
-    <div class="descuentoContainer">
+    <!-- <div class="descuentoContainer">
         <label for="cupon"><h3>¡Ingresa tu cupón de descuento!</h3></label>
         <input type="text" name="cupon" id="" placeholder="Pon tu código de descuento...">
         <button class="buttonDiscount">APLICAR DESCUENTO</button>
-    </div>
+    </div> -->
     <div class="totalCartContainerFather">
         <h3>Total del Carrito</h3>
         <div class="totalCartContainer">
