@@ -16,11 +16,18 @@ CREATE TABLE artists (
     nacionality VARCHAR(255) NOT NULL
 );
 
-CREATE TABLE clients (
+CREATE TABLE users (
 id VARCHAR(255) PRIMARY key ,
 name VARCHAR(255),
-email VARCHAR(255),
 address VARCHAR(255)
+email VARCHAR(255),
+password VARCHAR(255)
+);
+
+CREATE TABLE roles (
+id VARCHAR(255) PRIMARY key ,
+type VARCHAR(255) NOT NULL,
+FOREIGN KEY (users_id) REFERENCES users(id)
 );
 
 CREATE TABLE products  (
@@ -31,6 +38,7 @@ CREATE TABLE products  (
     price DECIMAL(10, 2) NOT NULL,
     on_sale TINYINT(1),
     new TINYINT(1),
+    featured TINYINT(1),
     img VARCHAR(255),
     technique_id VARCHAR(255),
     artist_id VARCHAR(255),
