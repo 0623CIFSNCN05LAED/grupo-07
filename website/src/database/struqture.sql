@@ -16,19 +16,23 @@ CREATE TABLE artists (
     nacionality VARCHAR(255) NOT NULL
 );
 
+
+CREATE TABLE roles (
+id VARCHAR(255) PRIMARY key ,
+type VARCHAR(255) NOT NULL
+);
+
 CREATE TABLE users (
 id VARCHAR(255) PRIMARY key ,
 name VARCHAR(255),
 address VARCHAR(255)
 email VARCHAR(255),
-password VARCHAR(255)
+password VARCHAR(255),
+rol_id VARCHAR(255),
+FOREIGN KEY (rol_id) REFERENCES roles (id)
 );
 
-CREATE TABLE roles (
-id VARCHAR(255) PRIMARY key ,
-type VARCHAR(255) NOT NULL,
-FOREIGN KEY (users_id) REFERENCES users(id)
-);
+
 
 CREATE TABLE products  (
     id VARCHAR(255) PRIMARY KEY,
