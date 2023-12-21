@@ -20,7 +20,7 @@ module.exports = (sequelize, dataTypes) => {
     Technique.associate = function (models) {
         Technique.hasMany(models.Product, {
             as: "products",
-            foreignKey: "id"
+            foreignKey: "technique_id"
         })
     }
     return Technique
