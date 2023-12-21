@@ -10,78 +10,15 @@
     <!-- Font Awesome Icons-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <!-- css mio -->
-    <link rel="stylesheet" href="/css/cartStyles.css">
     <%- include('partials/head') %>
+    <link rel="stylesheet" href="/css/cartStyles.css">
     <script src="/js/cart.js" defer></script>
     <title>Carrito de Compras</title>
 </head>
 <body>
     <%- include('partials/header') %>
-    <h1 style="margin-top: 10rem;">Tu carrito de compras</h1>
-    <div class="productContainerFather">
-        <button class="eraseProduct"><i class="fa-solid fa-circle-xmark"></i></button>
-        <div class="productContainer">
-            <div class="imageTitleContainer">
-                <img src="/images/obraArte1.jpeg" alt="">
-                <h4>"Abstracción Contemple"</h4>
-            </div>
-            <div class="productContainerData">
-                <h5>Precio</h5>
-                <p>$100000</p>
-                <h5>Autor</h5>
-                <p>Daniel Penna</p>
-                <h5>Cantidad</h5>
-                <div class="productContainerDataNumber">
-                    <button>+</button>
-                    <input type="number" name="" id="" value="1">
-                    <button>-</button>
-                </div>
-                <h5>Subtotal</h5>
-                <p>$100000</p>
-            </div>
-        </div>
-    </div>
-    <div class="productContainerFather">
-        <button class="eraseProduct"><i class="fa-solid fa-circle-xmark"></i></button>
-        <div class="productContainer">
-            <div class="imageTitleContainer">
-                <img src="/images/obraArte1.jpeg" alt="">
-                <h4>"Caminito"</h4>
-            </div>
-            <div class="productContainerData">
-                <h5>Precio</h5>
-                <p>$56000</p>
-                <h5>Autor</h5>
-                <p>Daniel Penna</p>
-                <h5>Cantidad</h5>
-                <div class="productContainerDataNumber">
-                    <button>+</button>
-                    <input type="number" name="" id="" value="2">
-                    <button>-</button>
-                </div>
-                <h5>Subtotal</h5>
-                <p>$112000</p>
-            </div>
-        </div>
-    </div>
-    <!-- <div class="descuentoContainer">
-        <label for="cupon"><h3>¡Ingresa tu cupón de descuento!</h3></label>
-        <input type="text" name="cupon" id="" placeholder="Pon tu código de descuento...">
-        <button class="buttonDiscount">APLICAR DESCUENTO</button>
-    </div> -->
-    <div class="totalCartContainerFather">
-        <h3>Total del Carrito</h3>
-        <div class="totalCartContainer">
-            <p>Subtotal</p>
-            <p>$212000</p>
-            <p>Descuentos</p>
-            <p>$0</p>
-            <p>TOTAL A PAGAR</p>
-            <p>$212000</p>
-        </div>
-    </div>
-    <div class="purchaseButton">
-        <button>CONFIRMAR COMPRA</button>
+    <h1 style="margin-top: 15rem;">Tu carrito de compras</h1>
+    <div class="cartContainer">
     </div>
     <%- include('partials/footer') %>
 </body>
