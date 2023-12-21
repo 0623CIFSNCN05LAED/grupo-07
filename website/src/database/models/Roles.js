@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = 'Technique';
+    let alias = 'Rol';
     let cols = {
         id: {
             type: dataTypes.BIGINT(10).UNSIGNED,
@@ -9,19 +9,23 @@ module.exports = (sequelize, dataTypes) => {
         type: {
             type: dataTypes.STRING(255),
             allowNull: false
-        }
+        },
+      
+        
     };
     let config = {
         timestamps: false,
-        tableName: 'techniques'
+        tableName: 'roles'
     }
-    const Technique = sequelize.define(alias,cols,config);
+    const Rol = sequelize.define(alias,cols,config);
 
-    Technique.associate = function (models) {
-        Technique.hasMany(models.Product, {
-            as: "products",
-            foreignKey: "technique_id"
+   Rol.associate = function (models) {
+        Rol.hasMany(models.User, {
+            as: "users",
+            foreignKey: "rol_id"
         })
+
+        
     }
-    return Technique
+    return Rol
 };

@@ -16,12 +16,36 @@ CREATE TABLE artists (
     nacionality VARCHAR(255) NOT NULL
 );
 
-CREATE TABLE clients (
+<<<<<<< HEAD:src/database/struqture.sql
+=======
+
+CREATE TABLE roles (
+id VARCHAR(255) PRIMARY key ,
+type VARCHAR(255) NOT NULL
+);
+
+>>>>>>> 557885d4ee8dbf5f09e0d814ada3c70a8f69341e:website/src/database/struqture.sql
+CREATE TABLE users (
 id VARCHAR(255) PRIMARY key ,
 name VARCHAR(255),
-email VARCHAR(255),
 address VARCHAR(255)
+email VARCHAR(255),
+<<<<<<< HEAD:src/database/struqture.sql
+password VARCHAR(255)
 );
+
+CREATE TABLE roles (
+id VARCHAR(255) PRIMARY key ,
+type VARCHAR(255) NOT NULL,
+FOREIGN KEY (users_id) REFERENCES users(id)
+=======
+password VARCHAR(255),
+rol_id VARCHAR(255),
+FOREIGN KEY (rol_id) REFERENCES roles (id)
+>>>>>>> 557885d4ee8dbf5f09e0d814ada3c70a8f69341e:website/src/database/struqture.sql
+);
+
+
 
 CREATE TABLE products  (
     id VARCHAR(255) PRIMARY KEY,
@@ -31,6 +55,7 @@ CREATE TABLE products  (
     price DECIMAL(10, 2) NOT NULL,
     on_sale TINYINT(1),
     new TINYINT(1),
+    featured TINYINT(1),
     img VARCHAR(255),
     technique_id VARCHAR(255),
     artist_id VARCHAR(255),

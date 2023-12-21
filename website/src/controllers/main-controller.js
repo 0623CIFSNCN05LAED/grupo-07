@@ -15,8 +15,18 @@ const controller = {
             res.status(500).send('Error interno del servidor.');
         }
     },
-    cart: (req, res) => {
-        res.render('productCart');
+    cart: async (req, res) => {
+        try {
+            let products = await db.Product.findByPk(req.params.id,
+                {
+                include : ['artist']
+                })
+                // console.log(products)
+            res.render('productCart', { products: products });
+        } catch (error) {
+            console.error(error);
+            res.status(500).send('Error interno del servidor.');
+        }
     },
     list: async (req, res) => {
         try {
@@ -112,5 +122,10 @@ const controller = {
         }
     }
 };
+
+
+
+
+    
 
 module.exports = controller;
