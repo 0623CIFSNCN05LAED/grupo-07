@@ -5,8 +5,9 @@ module.exports = {
     "username": "root",
     "password": process.env.PASSWORD || null,
     "database": "mercadoarte",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "host": "localhost",
+    "dialect": "mysql",
+    "port": 3306
   },
   "test": {
     "username": "root",
