@@ -16,21 +16,11 @@ CREATE TABLE artists (
     nacionality VARCHAR(255) NOT NULL
 );
 
-<<<<<<< HEAD:src/database/struqture.sql
-=======
-
-CREATE TABLE roles (
-id VARCHAR(255) PRIMARY key ,
-type VARCHAR(255) NOT NULL
-);
-
->>>>>>> 557885d4ee8dbf5f09e0d814ada3c70a8f69341e:website/src/database/struqture.sql
 CREATE TABLE users (
 id VARCHAR(255) PRIMARY key ,
 name VARCHAR(255),
 address VARCHAR(255)
 email VARCHAR(255),
-<<<<<<< HEAD:src/database/struqture.sql
 password VARCHAR(255)
 );
 
@@ -38,11 +28,6 @@ CREATE TABLE roles (
 id VARCHAR(255) PRIMARY key ,
 type VARCHAR(255) NOT NULL,
 FOREIGN KEY (users_id) REFERENCES users(id)
-=======
-password VARCHAR(255),
-rol_id VARCHAR(255),
-FOREIGN KEY (rol_id) REFERENCES roles (id)
->>>>>>> 557885d4ee8dbf5f09e0d814ada3c70a8f69341e:website/src/database/struqture.sql
 );
 
 

@@ -15,18 +15,19 @@ body {
     background-color: #fff;
     border-radius: 5px;
     padding: 30px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 12rem;
   }
   .artwork img {
-    max-width: 300px;
-    margin-right: 20px;
+    height: auto;
+    width: 70%;
     border: 1px solid #ccc;
     border-radius: 5px;
+    margin-bottom: 2rem;
   }
   .artwork-details {
     display: flex;
     width: auto;
- flex-direction: column;
+    flex-direction: column;
   }
   .artwork-title {
     font-size: 24px;
@@ -45,34 +46,36 @@ body {
   .artwork-description {
     font-size: 16px;
     line-height: 1.5;
+    color: #030000;
   }
   .artwork-image {
-   height:500px;
-   width: 300px;
+    text-align: center;
   }
   .container-button {
     display: flex;
     flex-direction: row;
     align-items: center;
-    
   }
   .container-right {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
   }
   .buttons{
     width: 40px;
     height: 40px;
     text-align: center;
-    background-color: transparent;
+    background-color: #272727;
+    color: #fff;
   }
   .number{
-    margin:0 10px ;
+    color: #030000;
+    font-size: 1.2rem;
+    padding: 0.5rem;
   }
   .carrito{
-    background-color: transparent;
+    background-color: #272727;
+    color: #fff;
     text-align: center;
     padding: 5px;
     margin-top: 10px;
@@ -80,9 +83,10 @@ body {
 }
 
 @media (max-width: 767px){
- .artwork {
+  .artwork {
     flex-direction: column;
     align-items: center;
+    margin-top: 6rem;
   }
   .artwork img {
     margin-right: 0;
@@ -92,19 +96,38 @@ body {
   }
   .container-button {
     margin-top: 10px;
-     text-align: center;  
-     justify-content: center;
+    text-align: center;  
+    justify-content: center;
   }
   .carrito{
     width: 100%;
     border-radius: 0;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 10px;
-
- }
-  
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
 }  
-@media (min-width: 768px)and (max-width:990px){}
-
-@media (max-width: 991px){}
+@media (min-width: 768px)and (max-width:990px){
+  .artwork{
+    margin-top: 6rem;
+  }
+  .container-button{
+    margin: auto;
+  }
+  .carrito{
+    margin: auto;
+    margin-top: 1rem;
+  }
+}
+@media (min-width: 991px){
+  .artwork{
+    margin-top: 6rem;
+  }
+  .container-button{
+    margin: auto;
+  }
+  .carrito{
+    margin: auto;
+    margin-top: 1rem;
+  }
+}
