@@ -30,6 +30,10 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.BOOLEAN,
             allowNull: false
         },
+        featured: {
+            type: dataTypes.BOOLEAN,
+            allowNull: false
+        },
         img: {
             type: dataTypes.STRING(255),
             allowNull: false

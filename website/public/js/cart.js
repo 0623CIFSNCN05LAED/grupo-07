@@ -70,38 +70,38 @@ document.addEventListener("DOMContentLoaded", async function () {
             productQuantity.textContent = `Cantidad`
             productContainerData.appendChild(productQuantity)
 
-            let add = document.createElement("button")
-            add.textContent = "+";
-            add.classList.add('buttons')
-            add.setAttribute('id', 'add')
-            add.addEventListener('click', function () {
-                let currentNumber = parseInt(productQuantityValue.textContent);
-                if (currentNumber > 1) {
-                    currentNumber++;
-                    productQuantityValue.textContent = currentNumber;
-                    item.quantity = currentNumber;
-                }
-            } )
-            productContainerData.appendChild(add)
+            // let add = document.createElement("button")
+            // add.textContent = "+";
+            // add.classList.add('buttons')
+            // add.setAttribute('id', 'add')
+            // add.addEventListener('click', function () {
+            //     let currentNumber = parseInt(productQuantityValue.textContent);
+            //     if (currentNumber > 1) {
+            //         currentNumber++;
+            //         productQuantityValue.textContent = currentNumber;
+            //         item.quantity = currentNumber;
+            //     }
+            // } )
+            // productContainerData.appendChild(add)
 
             let productQuantityValue = document.createElement('p')
             productQuantityValue.textContent = `${item.quantity}`
             productQuantityValue.style.color = 'black'
             productContainerData.appendChild(productQuantityValue)
         
-            let subtract = document.createElement("button")
-            subtract.textContent = "-";
-            subtract.classList.add('buttons')
-            subtract.setAttribute('id', 'subtract')
-            subtract.addEventListener('click', function () {
+            // let subtract = document.createElement("button")
+            // subtract.textContent = "-";
+            // subtract.classList.add('buttons')
+            // subtract.setAttribute('id', 'subtract')
+            // subtract.addEventListener('click', function () {
 
-                let currentNumber = parseInt(productQuantityValue.textContent);
-                if (currentNumber > 1) {
-                    currentNumber--;
-                    productQuantityValue.textContent = currentNumber;
-                }
-            } )
-            productContainerData.appendChild(subtract)
+            //     let currentNumber = parseInt(productQuantityValue.textContent);
+            //     if (currentNumber > 1) {
+            //         currentNumber--;
+            //         productQuantityValue.textContent = currentNumber;
+            //     }
+            // } )
+            // productContainerData.appendChild(subtract)
 
             let subtotalTitle = document.createElement("h5")
             subtotalTitle.textContent = `Subtotal`
@@ -150,8 +150,5 @@ document.addEventListener("DOMContentLoaded", async function () {
         purchaseButton.textContent = 'Comprar'
         purchaseButtonDiv.appendChild(purchaseButton)
     }
-    displayCart()
-
-    //quiero que hagas una funcion que sume
-    
+    displayCart()    
 })
