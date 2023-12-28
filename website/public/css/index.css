@@ -53,7 +53,7 @@
     width: 30%;
     font-family: 'Lobster';
     color: #fff;
-    background-color: #341b1b;
+    background-color: #272727;
     box-shadow: -1px 1px 14px 0px rgba(52,27,27,0.75);
     -webkit-box-shadow: 0px 0px 14px 0px rgba(52,27,27,0.75);
     -moz-box-shadow: -1px 1px 14px 0px rgba(52,27,27,0.75);
@@ -119,11 +119,11 @@
         width: 30%;
         color: #341b1b;
         box-shadow: none;
-        border: 1px solid #341b1b;
+        border: 1px solid #272727;
         transition: all 0.5s;
     }
     .previewButton:hover{
-        background-color: #341b1b;
+        background-color: #272727;
         color: #fff;
         box-shadow: -1px 1px 14px 0px rgba(52,27,27,0.75);
         -webkit-box-shadow: 0px 0px 14px 0px rgba(52,27,27,0.75);
