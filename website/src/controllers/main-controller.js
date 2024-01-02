@@ -8,7 +8,7 @@ const controller = {
                 {
                 include : ['artist']
                 })
-                // console.log(products)
+                
             res.render('productDetail', { products: products });
         } catch (error) {
             console.error(error);
@@ -21,7 +21,7 @@ const controller = {
                 {
                 include : ['artist']
                 })
-                // console.log(products)
+                
             res.render('productCart', { products: products });
         } catch (error) {
             console.error(error);
@@ -44,10 +44,27 @@ const controller = {
         req.session.errors = null;
         res.render("login", { errors: errors ? errors : null, oldData });
     },
-    login: (req, res) => {
+    login: async (req, res) => {
         const data = req.body;
-        req.session.userData = data;
-        res.redirect("/");
+        console.log(data);
+        let user = await db.User.findOne({ where: { userLogin: user.data } });
+       
+        
+        if (user) {
+            // Comprueba si la contraseña ingresada coincide con la contraseña del usuario en la base de datos.
+            // Asegúrate de que estás comparando la contraseña correctamente, especialmente si estás utilizando algún tipo de hash o cifrado en la contraseña.
+            if (data.password === user.password) {
+                // Inicia sesión del usuario y redirige a la página de inicio
+                req.session.user = user;
+                res.redirect("/");
+            } else {
+                // Contraseña incorrecta
+                res.status(401).send('Contraseña incorrecta.');
+            }
+        } else {
+            // Usuario no encontrado
+            res.status(404).send('Usuario no encontrado.');
+        }
     },
     create: (req, res) => {
         res.render("CreateProducts");
@@ -67,32 +84,38 @@ const controller = {
     showRegister: (req, res) => {
         res.render("register");
     },
-    processRegister: (req, res) => {
+    processRegister: async (req, res) => {
+        
         let errors = validationResult(req);
+        const admin = 16;
+        const usuario = 17;
 
-        if (!errors.isEmpty()) {
-            res.render("register", {
-                errors: errors.mapped(),
-                oldData: req.body
-            });
-        } else {
+            if (!errors.isEmpty()) {
+                res.render("register", {
+                    errors: errors.mapped(),
+                    oldData: req.body
+                });
+            } else {
+                const isAdmin = req.body.email && req.body.email.toLowerCase().includes('@mercadoarte.com');
             
-            const isAdmin = req.body.email && req.body.email.toLowerCase().includes('@mercadoarte.com');
-
-
-            
-            const newUser = {
-                userName: req.body.userName,
-                userPassword: req.body.userPassword,
                 
+                const newUser = await db.User.create({
+                    name: req.body.userName, 
+                    address: req.body.userAdress , 
+                    email: req.body.userEmail, 
+                    password: req.body.userPassword, 
+                    rol_id: isAdmin ? admin : usuario,
+                });
+            
+                
+                console.log (newUser)
+                newUser.save()
+            }
 
-              
-                role: isAdmin ? 'admin' : 'user'
-            };
 
            
             res.redirect("/");
-        }
+        
     },
     featured: async (req, res) => {
         try {

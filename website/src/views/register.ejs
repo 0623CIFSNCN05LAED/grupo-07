@@ -30,6 +30,12 @@
                     <p class="error-msg"><%= errors.userEmail.msg %></p>
                 <% } %>
 
+                <label for="userAdress">Direccion</label>
+                <input type="adress" name="userAdress" id="userAdress" placeholder="Direccion" value="<%= locals.oldData && oldData.userAdress ? oldData.userAdress : "" %>">
+                <% if (locals.errors && errors.userAdress) { %>
+                    <p class="error-msg"><%= errors.userAdress.msg %></p>
+                <% } %>
+
                 <label for="userPassword">Contraseña</label>
                 <input type="password" name="userPassword" id="userPassword" placeholder="Contraseña">
                 <% if (locals.errors && errors.userPassword) { %>
