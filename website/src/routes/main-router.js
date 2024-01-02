@@ -29,7 +29,7 @@ router.get("/", mainController.home)
 router.get("/productcart",mainController.cart);
 router.get("/productlist",mainController.list);
 router.get("/login", mainController.showLogin)
-router.post("/login", urlencoded({ extended: false }), validations,validateForm, mainController.login)
+router.post("/login" , urlencoded({ extended: false }), validations, mainController.login)
 router.get("/register", mainController.showRegister);
 router.post("/register", upload.single('imgProfile'), registerValidator, mainController.processRegister);
 router.get("/createproduct", userGuard, mainController.create);

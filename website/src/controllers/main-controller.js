@@ -47,18 +47,19 @@ const controller = {
     login: async (req, res) => {
         const data = req.body;
         console.log(data);
-        let user = await db.User.findOne({ where: { userLogin: user.data } });
-       
+        let user = await db.User.findOne({ where: { name : data.username } });
         
+    
         if (user) {
             // Comprueba si la contraseña ingresada coincide con la contraseña del usuario en la base de datos.
             // Asegúrate de que estás comparando la contraseña correctamente, especialmente si estás utilizando algún tipo de hash o cifrado en la contraseña.
-            if (data.password === user.password) {
+            if (data['user-password'] === user.password) {
                 // Inicia sesión del usuario y redirige a la página de inicio
                 req.session.user = user;
                 res.redirect("/");
             } else {
                 // Contraseña incorrecta
+                console.log("error");
                 res.status(401).send('Contraseña incorrecta.');
             }
         } else {
