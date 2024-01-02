@@ -1,11 +1,14 @@
-const productService = require("../services/productService");
+
+const {deleting} = require("../products/product")
 
 const controller = {
-  deleteProduct: (req, res) => {
-    const productId = req.body["product-id"];
-    productService.deleteProduct(productId);
-    res.redirect("/products"); 
-  },
+    
+    deleteProduct: (req, res) => {
+        const { id } = req.body;
+       
+       deleting(id)
+        res.redirect('/product-list');
+    }
 };
 
 module.exports = controller;
