@@ -8,7 +8,7 @@ const controller = {
                 {
                 include : ['artist']
                 })
-                // console.log(products)
+                
             res.render('productDetail', { products: products });
         } catch (error) {
             console.error(error);
@@ -21,7 +21,7 @@ const controller = {
                 {
                 include : ['artist']
                 })
-                // console.log(products)
+                
             res.render('productCart', { products: products });
         } catch (error) {
             console.error(error);
@@ -46,8 +46,25 @@ const controller = {
     },
     login: async (req, res) => {
         const data = req.body;
-        let users = await db.Users.findByPK(data);
-        res.redirect("/");
+        console.log(data);
+        let user = await db.User.findOne({ where: { userLogin: user.data } });
+       
+        
+        if (user) {
+            // Comprueba si la contraseña ingresada coincide con la contraseña del usuario en la base de datos.
+            // Asegúrate de que estás comparando la contraseña correctamente, especialmente si estás utilizando algún tipo de hash o cifrado en la contraseña.
+            if (data.password === user.password) {
+                // Inicia sesión del usuario y redirige a la página de inicio
+                req.session.user = user;
+                res.redirect("/");
+            } else {
+                // Contraseña incorrecta
+                res.status(401).send('Contraseña incorrecta.');
+            }
+        } else {
+            // Usuario no encontrado
+            res.status(404).send('Usuario no encontrado.');
+        }
     },
     create: (req, res) => {
         res.render("CreateProducts");
@@ -68,7 +85,7 @@ const controller = {
         res.render("register");
     },
     processRegister: async (req, res) => {
-        //let users = await db.User.findAll();
+        
         let errors = validationResult(req);
         const admin = 16;
         const usuario = 17;
@@ -81,16 +98,16 @@ const controller = {
             } else {
                 const isAdmin = req.body.email && req.body.email.toLowerCase().includes('@mercadoarte.com');
             
-                // Crear una nueva instancia del modelo de usuario
+                
                 const newUser = await db.User.create({
-                    name: req.body.userName, // Asegúrate de que 'name' es el nombre correcto del campo en tu modelo
-                    address: req.body.userAdress , // Asegúrate de que 'password' es el nombre correcto del campo en tu modelo
-                    email: req.body.userEmail, // Asegúrate de que 'email' es el nombre correcto del campo en tu modelo
-                    password: req.body.userPassword, // Asegúrate de que 'address' es el nombre correcto del campo en tu modelo
+                    name: req.body.userName, 
+                    address: req.body.userAdress , 
+                    email: req.body.userEmail, 
+                    password: req.body.userPassword, 
                     rol_id: isAdmin ? admin : usuario,
                 });
             
-                // Ahora puedes llamar a 'newUser.save()'
+                
                 console.log (newUser)
                 newUser.save()
             }
