@@ -44,9 +44,9 @@ const controller = {
         req.session.errors = null;
         res.render("login", { errors: errors ? errors : null, oldData });
     },
-    login: (req, res) => {
+    login: async (req, res) => {
         const data = req.body;
-        req.session.userData = data;
+        let users = await db.Users.findByPK(data);
         res.redirect("/");
     },
     create: (req, res) => {
@@ -67,32 +67,38 @@ const controller = {
     showRegister: (req, res) => {
         res.render("register");
     },
-    processRegister: (req, res) => {
+    processRegister: async (req, res) => {
+        //let users = await db.User.findAll();
         let errors = validationResult(req);
+        const admin = 16;
+        const usuario = 17;
 
-        if (!errors.isEmpty()) {
-            res.render("register", {
-                errors: errors.mapped(),
-                oldData: req.body
-            });
-        } else {
+            if (!errors.isEmpty()) {
+                res.render("register", {
+                    errors: errors.mapped(),
+                    oldData: req.body
+                });
+            } else {
+                const isAdmin = req.body.email && req.body.email.toLowerCase().includes('@mercadoarte.com');
             
-            const isAdmin = req.body.email && req.body.email.toLowerCase().includes('@mercadoarte.com');
-
-
+                // Crear una nueva instancia del modelo de usuario
+                const newUser = await db.User.create({
+                    name: req.body.userName, // Asegúrate de que 'name' es el nombre correcto del campo en tu modelo
+                    address: req.body.userAdress , // Asegúrate de que 'password' es el nombre correcto del campo en tu modelo
+                    email: req.body.userEmail, // Asegúrate de que 'email' es el nombre correcto del campo en tu modelo
+                    password: req.body.userPassword, // Asegúrate de que 'address' es el nombre correcto del campo en tu modelo
+                    rol_id: isAdmin ? admin : usuario,
+                });
             
-            const newUser = {
-                userName: req.body.userName,
-                userPassword: req.body.userPassword,
-                
+                // Ahora puedes llamar a 'newUser.save()'
+                console.log (newUser)
+                newUser.save()
+            }
 
-              
-                role: isAdmin ? 'admin' : 'user'
-            };
 
            
             res.redirect("/");
-        }
+        
     },
     featured: async (req, res) => {
         try {
