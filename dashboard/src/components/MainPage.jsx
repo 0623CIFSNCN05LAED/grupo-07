@@ -45,10 +45,9 @@ export default function MainPage() {
           <h1>MercadoArte</h1>
           <span>Dashboard</span>
         </div>
-        <div className="mt-8">
-          <h2 className="text-2xl font-bold">
-            Total de productos: {products ? products.length : 0}
-          </h2>
+        <div className="mt-8 text-2xl font-bold">
+          <h2>Total de productos: {products ? products.length : 0}</h2>
+          <h2>Total de usuarios: 5</h2>
         </div>
       </div>
       <div className="bg-neutral-700 rounded-xl p-6">
