@@ -2,7 +2,7 @@ const {create} = require("../products/product")
 
 const controller = {
     showForm: (req, res) => {
-        res.render('create-product');
+        res.render('createProducts');
     },
     saveProduct: (req, res) => {
         const { title, artist, description, year, price, discount, image, category, colors, dimensions, material ,technique , frame, edition  } = req.body;

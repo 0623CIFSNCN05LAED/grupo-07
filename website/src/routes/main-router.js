@@ -18,6 +18,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 const mainController = require('../controllers/main-controller')
+const CreateController = require('../controllers/create-Controller')
 const validations = require("../validations/login-validations")
 const registerValidator = require('../validations/registerValidation');
 const validateForm = require("../middlewares/validate-form")
@@ -39,6 +40,7 @@ router.get("/productsfeatured", mainController.featured)
 router.get("/productsnew", mainController.newProducts)
 router.get("/results", results.results)
 router.post("/results", results.postResults)
+router.get("/CreateProducts", CreateController.showForm)
 //createProduct al ser un formulario va a necesitar una ruta get y la ruta post, también configurando su urlencoded
 
 const apiRouter = require('./api/index')

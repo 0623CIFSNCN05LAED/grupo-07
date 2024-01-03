@@ -1,110 +1,82 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/public/css/CreateProduct.css"
-</head>
-<body>
-    <header class="header">
-        <header class="header">
-            <h1>MercadoArte</h1>
-            
-        </header>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Crea tu producto</title>
+    <meta name="viewport" content="width=device-width,
+      initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/CreateProduct.css" />
+    <script>
+      function validateForm() {
         
-    </header>
-    <form action="/products/create" method="POST" enctype="multipart/form-data" class="formulario">
-        <h1 class="titulo-formulario">Crea tu producto</h1>
-        <div class="control-formulario">
-            <label for="title">Título de la Obra:</label>
-            <input type="text" id="title" name="title" placeholder="Ejemplo: Noche Estrellada" class="control" required>
+        alert('Sus cambios han sido exitosos');
+        window.location.href = "/";
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="form-title">Crea tu producto</h1>
+      <form action="#" onsubmit="event.preventDefault(); validateForm();">
+        <div class="main-user-info">
+          <div class="user-input-box">
+            <label for="fullName">Titulo</label>
+            <input type="text"
+                    id="Titulo"
+                    name="Titulo"
+                    placeholder="Titulo de la obra"/>
+          </div>
+          <div class="user-input-box">
+            <label for="username">Precio</label>
+            <input type="text"
+                    id="Precio"
+                    name="Precio"
+                    placeholder="Valor de la obra"/>
+          </div>
+          <div class="user-input-box">
+            <label for="Fecha">Fecha de creacion</label>
+            <input type="Fecha"
+                    id="Creation_date"
+                    name="Fecha"
+                    placeholder="Ingrese la fecha de creacion"/>
+          </div>
+          <div class="user-input-box">
+            <label for="Descuento">Descuento%</label>
+            <input type="text"
+                    id="on_sale"
+                    name="on_sale"
+                    placeholder="Ingresa el descuento%"/>
+          </div>
+          <div class="user-input-box">
+            <label for="password">Descripcion</label>
+            <input type="text"
+                    id="Description"
+                    name="Description"
+                    placeholder="Ingrese la descripcion del producto"/>
+          </div>
+          <div class="user-input-box">
+            <label for="confirmPassword">Tecnica</label>
+            <input type="Technique"
+                    id="Technique"
+                    name="Technique"
+                    placeholder="Tecnica de la obra"/>
+          </div>
         </div>
-        <div class="control-formulario">
-            <label for="artist">Artista:</label>
-            <input type="text" id="artist" name= "artist" placeholder="Ejemplo: Vincent van Gogh" class="control" required>
+        <div class="gender-details-box">
+          <span class="gender-title">PRODUCTO</span>
+          <div class="gender-category">
+            <input type="radio" name="gender" id="male">
+            <label for="male">Crear</label>
+            <input type="radio" name="gender" id="female">
+            <label for="female">Editar</label>
+            <input type="radio" name="gender" id="other">
+            <label for="other">Borrar</label>
+          </div>
         </div>
-        <div class="control-formulario">
-            <label for="description">Descripción:</label>
-            <textarea id="description" name="description" placeholder="Ejemplo: Una pintura icónica que representa una noche estrellada..." class="control" required></textarea>
+        <div class="form-submit-btn">
+          <input type="submit" value="CONFIRMAR">
         </div>
-        <div class="control-formulario">
-            <label for="year">Año de Creación:</label>
-            <input type="text" id="year" name="year" placeholder="Ejemplo: 1889" class="control" required>
-        </div>
-        <div class ="control-formulario">
-            <label for="price">Precio:</label>
-            <input type="text" id="price" name="price" placeholder="Ejemplo: 10000" class="control" required>
-        </div>
-        <div class="control-formulario">
-            <label for="discount">Descuento:</label>
-            <input type="text" id="discount" name="discount" placeholder="Ejemplo: 10%" class="control" required>
-        </div>
-        <div class="control-formulario">
-            <label for="image">Imagen de la Obra:</label>
-            <input type="file" id="image" name="image" accept="image/*" class="control" required>
-        </div>
-        <div class="control-formulario">
-            <label for="category">Categoría:</label>
-            <input type="text" id="category" name="category" placeholder="Ejemplo: Pintura" class="control" required>
-        </div>
-        <div class="control-formulario">
-            <label for="colors">Colores:</label>
-            <input type="text" id="colors" name="colors" placeholder="Ejemplo: Azul, Amarillo" class="control" required>
-        </div>
-        <div class="control-formulario">
-            <label for="dimensions">Dimensiones:</label>
-            <input type="text" id="dimensions" name="dimensions" placeholder="Ejemplo: 73.7 cm × 92.1 cm" class="control" required>
-        </div>
-        <div class="control-formulario">
-            <label for="material">Material:</label>
-            <input type="text" id="material" name="material" placeholder="Ejemplo: Óleo sobre lienzo" class="control" required>
-        </div>
-        <div class="control-formulario">
-            <label for="technique">Técnica:</label>
-            <input type="text" id="technique" name="technique" placeholder="Ejemplo: Pintura al óleo" class="control" required>
-        </div>
-        <div class="control-formulario">
-            <label for="frame">Marco:</label>
-            <input type="text" id="frame" name="frame" placeholder="Ejemplo: Enmarcado dorado" class="control" required>
-        </div>
-        <div class="control-formulario">
-            <label for="edition">Edición:</label>
-            <input type="text" id="edition" name="edition" placeholder="Ejemplo: Edición limitada de 50 copias" class="control" required>
-        </div>
-        <button type="submit" class="boton-formulario">Guardar Cambios</button>
-        <button type="reset" class="boton-formulario">Restablecer</button>
-    </form>
-    <footer class="footer">
-        <footer class="footer">
-            <div class="footer-content">
-                <div class="contact-info">
-                    <h3>Contacto</h3>
-                    <p>Correo Electrónico: info@MercadoArte.com</p>
-                    <p>Teléfono: +123 456 789</p>
-                </div>
-                <div class="social-media">
-                    <h3>Redes Sociales</h3>
-                    <ul>
-                        <li><a href="#">Facebook</a></li>
-                        <li><a href="#">Twitter</a></li>
-                        <li><a href="#">Instagram</a></li>
-                    </ul>
-                </div>
-                <div class="quick-links">
-                    <h3>Enlaces Rápidos</h3>
-                    <ul>
-                        <li><a href="#">Términos y Condiciones</a></li>
-                        <li><a href="#">Política de Privacidad</a></li>
-                        <li><a href="#">Preguntas Frecuentes</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2023 MercadoArte - Todos los derechos reservados</p>    
-            </div>
-            <button type="submit">Crear</button> 
-        </footer>
-        
-    </footer>
-</body>
+      </form>
+    </div>
+  </body>
 </html>
