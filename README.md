@@ -39,6 +39,7 @@ Para desarrollarlos, hemos usado Figma como nuestra herramienta principal. El pr
 * Formulario de Registro
 * Formulario de login
 * Colores, logo y tipografía
+[Wireframes (Lo más usado finalmente)](https://whimsical.com/detalle-producto-ambos-56M2Fi3oYV9RhRtWstzaBM)
 
 
 ## Trello
@@ -48,3 +49,5 @@ Para desarrollarlos, hemos usado Figma como nuestra herramienta principal. El pr
 * [Sprint 4](https://trello.com/b/GAbLoZM8/sprint-4)
 * [Sprint 5](https://trello.com/b/Cz22oo9t/sprint-5)
 * [Sprint 6](https://trello.com/b/XAxFM2Yy/sprint-6)
+* [Sprint 7](https://trello.com/b/QDgSYUl8/sprint-7)
+* [Sprint 8](https://trello.com/b/ONs0A6Gx/sprint-8)
