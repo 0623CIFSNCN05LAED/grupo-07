@@ -1,13 +1,15 @@
-const express = require('express');
-const router = express.Router()
+const express = require("express");
+const router = express.Router();
+const cors = require("cors");
 
+router.use(cors());
 //Homepage
-router.get('/', function (res, req, next) {
-    res.render('index', { title: 'MercadoArte' })
+router.get("/", function (res, req, next) {
+  res.render("index", { title: "MercadoArte" });
 });
 
-const productAPIRouter = require('./products')
+const productAPIRouter = require("./products");
 
-router.use(productAPIRouter)
+router.use(productAPIRouter);
 
 module.exports = router;
