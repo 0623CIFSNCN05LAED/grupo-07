@@ -50,6 +50,11 @@ header{
     opacity: 0;
     visibility: hidden;
 }
+.boton.pequeño {
+    font-size: 0.8em; /* Ajusta el tamaño del texto */
+    padding: 5px 10px; /* Ajusta el padding para que el botón sea más pequeño */
+}
+
 .nav.visible {
     opacity: 1;
     visibility: visible;

@@ -1,34 +1,36 @@
 <header>
-        <a href="/"><img class="logo" src="/images/logoo.png" alt="Logo"></a>
-        <div class="searchBar">
-            <form action="/results" method="post">
-                <input type="text" name="autoComplete" placeholder="Busca por título o autor...">
-                <button><i class="fa-solid fa-magnifying-glass"></i></button>
-            </form>
-        </div>
-        <button class="abrir-menu boton" id="abrir"><i class="fa-solid fa-bars"></i></button>
-        <nav class="nav" id="nav">
-            <button class="cerrar-menu boton" id="cerrar"><i class="fa-solid fa-xmark"></i></button>
-            <ul class="nav-list">
-                <i class="fa-solid fa-user userDropdown"></i>
-                <a href="/login" class="userOption">Logueate</a>
-                <a href="/register" class="userOption">Regístrate</a>
-                <li><a href="/productsNew">crear</a></li>
-                 <li><a href="#">Novedades</a></li>
-                <li><a href="#">Destacados</a></li>
-                <li><a href="#">Ofertas</a></li>
-                <li><a href="/productList">Productos</a></li>
-                <div class="dropdown">
-                    <span class="dropdownSpan">Todo</span>
-                    <div class="dropdown-content">
-                        <li><a class="dropdownOption" href="/productsNew">Novedades</a></li>
-                        <li><a class="dropdownOption" href="/productsFeatured">Destacados</a></li>
-                        <li><a class="dropdownOption" href="/productsOnSale">Ofertas</a></li>
-                        <li><a class="dropdownOption" href="/productList">Productos</a></li>
-                    </div>
+    <a href="/"><img class="logo" src="/images/logoo.png" alt="Logo"></a>
+    <div class="searchBar">
+        <form action="/results" method="post">
+            <input type="text" name="autoComplete" placeholder="Busca por título o autor...">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+    </div>
+    <button class="abrir-menu boton" id="abrir"><i class="fa-solid fa-bars"></i></button>
+    <nav class="nav" id="nav">
+        <button class="cerrar-menu boton" id="cerrar"><i class="fa-solid fa-xmark"></i></button>
+        <ul class="nav-list">
+            <!-- Agregamos los botones de Loguearse y Registrarse al principio -->
+            <a href="/login" class="boton pequeño">Loguearse</a>
+            <a href="/register" class="boton pequeño">Registrarse</a>
+            <!-- Agregamos el atributo title al icono de usuario -->
+            <i class="fa-solid fa-user userDropdown" title="Usuario DH"></i>
+            <a href="/login" class="userOption">Logueate</a>
+            <a href="/register" class="userOption">Regístrate</a>
+            
+            <div class="dropdown">
+                <span class="dropdownSpan">Todo</span>
+                <div class="dropdown-content">
+                    <li><a class="dropdownOption" href="/productsNew">Novedades</a></li>
+                    <li><a class="dropdownOption" href="/productsFeatured">Destacados</a></li>
+                    <li><a class="dropdownOption" href="/productsOnSale">Ofertas</a></li>
+                    <li><a class="dropdownOption" href="/productList">Productos</a></li>
+                    <li><a class="dropdownOption" href="/">Crear producto</a></li>
+                    <li><a class="dropdownOption" href="/">Editar Producto</a></li>
                 </div>
-                <a href="/productcart" class="cartOption">Mi Carrito</a>
-                <a href="/productcart" class="cartIcon"><i class="fa-solid fa-cart-shopping"></i></a>
-            </ul>
-        </nav>
+            </div>
+            <a href="/productcart" class="cartOption">Mi Carrito</a>
+            <a href="/productcart" class="cartIcon"><i class="fa-solid fa-cart-shopping"></i></a>
+        </ul>
+    </nav>
 </header>
