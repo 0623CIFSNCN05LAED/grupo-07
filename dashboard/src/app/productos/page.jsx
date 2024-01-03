@@ -38,7 +38,7 @@ export default function Productos() {
       <ul className="grid xl:grid-cols-4 md:grid-cols-2 gap-5">
         {filteredProducts?.map((product) => (
           <li
-            className="border border-neutral-500 cursor-pointer w-max rounded-xl"
+            className="border-2 shadow-xl border-neutral-800 cursor-pointer w-max rounded-xl"
             key={product.id}
           >
             <Image

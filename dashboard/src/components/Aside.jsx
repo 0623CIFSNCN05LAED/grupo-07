@@ -9,10 +9,6 @@ const links = [
     path: "/usuarios",
   },
   { name: "Productos", path: "/productos" },
-  {
-    name: "Categorias",
-    path: "/categorias",
-  },
 ];
 
 export default function Aside() {

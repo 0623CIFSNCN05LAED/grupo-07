@@ -33,11 +33,19 @@ export default function MainPage() {
   ];
 
   const [products, setProducts] = useState();
+  const [users, setUsers] = useState();
+  useEffect(() => {
+    fetch("http://localhost:3000/api/users")
+      .then((req) => req.json())
+      .then((data) => setUsers(data));
+  }, []);
+
   useEffect(() => {
     fetch("http://localhost:3000/api/productList")
       .then((req) => req.json())
       .then((data) => setProducts(data));
   }, []);
+
   return (
     <main className="p-4 grid grid-cols-[400px_minmax(400px,_1fr)] gap-3">
       <div className="bg-neutral-800 p-6 rounded-xl">
@@ -45,9 +53,14 @@ export default function MainPage() {
           <h1>MercadoArte</h1>
           <span>Dashboard</span>
         </div>
+        <div className="mt-2">
+          <h2 className="text-lg font-medium">
+            Donde Cada Obra Encuentra su Hogar.
+          </h2>
+        </div>
         <div className="mt-8 text-2xl font-bold">
           <h2>Total de productos: {products ? products.length : 0}</h2>
-          <h2>Total de usuarios: 5</h2>
+          <h2>Total de usuarios: {users ? users.length : 0}</h2>
         </div>
       </div>
       <div className="bg-neutral-700 rounded-xl p-6">
@@ -79,7 +92,17 @@ export default function MainPage() {
         </div>
       </div>
       <div className="bg-zinc-800 col-span-2 p-6 rounded-xl">
-        <h3></h3>
+        <h2 className="mb-2 flex flex-col text-4xl font-bold bg-gradient-to-r from-orange-300 via-sky-300 to-gray-50 text-transparent bg-clip-text">
+          Acerca de
+        </h2>
+        <h3 className="text-lg font-bold">
+          Descubre la esencia del arte en nuestro Mercado de Arte Dashboard,
+          donde la creatividad y la innovación convergen en una experiencia
+          única. Explora una amplia gama de obras maestras de artistas
+          talentosos, desde pinturas cautivadoras hasta esculturas
+          vanguardistas. Nuestro exclusivo dashboard te sumerge en un viaje
+          visual, brindándote una vista panorámica de la diversidad artística.
+        </h3>
       </div>
     </main>
   );
