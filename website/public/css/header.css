@@ -130,7 +130,7 @@ header{
     color: #d1d1d1;
     text-decoration: none;
 }
-@media (min-width: 520px){
+@media (min-width: 600px){
     .searchBar input{
         max-width: 350px;
     }
