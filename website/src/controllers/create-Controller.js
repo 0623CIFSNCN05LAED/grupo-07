@@ -5,7 +5,7 @@ const controller = {
         res.render('create-product');
     },
     saveProduct: (req, res) => {
-        const { title, artist, description, year, price, discount, image, } = req.body;
+        const { title, artist, description, year, price, discount, image, category, colors, dimensions, material ,technique , frame, edition  } = req.body;
        const newProduct = { 
         title,
         artist,
@@ -13,7 +13,14 @@ const controller = {
         year,
         price,
         discount,
-        image,  
+        image,
+        category, 
+        colors,
+        dimensions, 
+        material, 
+        technique,
+        frame,
+        edition
        }
        create(newProduct)
         res.redirect('/product-list');
